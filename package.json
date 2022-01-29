@@ -1,7 +1,7 @@
 {
   "name": "my-wedding-site",
   "version": "0.1.0",
-  "homepage": "https://pedrozavala.github.io/wedding-site",
+  "homepage": "https://pedrozavala.github.io",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build && cp CNAME ./build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
