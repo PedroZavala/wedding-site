@@ -1,0 +1,32 @@
+.intro-root {
+
+}
+
+.intro-welcome {
+  background-image: url(https://thumbs.gfycat.com/ConcreteSnarlingBlackfish-size_restricted.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+
+.intro-text-title {
+  text-align: center;
+  font-size: calc(10px + 5vmin);
+  font-family: cursive;
+  color: rgb(218, 218, 218);
+  margin-block-start: 0;
+  position: relative;
+  top: calc(5px + 10vh);
+}
+
+.intro-text-date {
+  text-align: center;
+  font-size: calc(5px + 3vmin);
+  font-family: fantasy;
+  color: rgb(218, 218, 218);
+  position: relative;
+  top: calc(5px + 10vh);
+}
