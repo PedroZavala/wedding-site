@@ -4,14 +4,22 @@ function App() {
   return (
     <div className='main-root'>
       <div className='intro-root'>
-        <img src='https://thumbs.gfycat.com/ConcreteSnarlingBlackfish-size_restricted.gif' alt='Loading...' className='intro-image'></img>
         <div className='intro-welcome'>
-          <h1 className='intro-text'>Zavala Wedding</h1>
-          <h1 className='intro-text'>September 10, 2022</h1>
+          <h1 className='intro-text-title'>Zavala Wedding</h1>
+          <p className='intro-text-date'>September 10, 2022</p>
+          <div className='countdown'>
+            <p>Place holder for countdown</p>
+          </div>
         </div>
       </div>
-      <div className='registries-div'>
-        <h1 className='intro-text' >Zavala Wedding</h1>
+      <div className='registries-root'>
+        <p>Placeholder for registry links</p>
+      </div>
+      <div className='maps-root'>
+        <p>Placeholder for maps integration</p>
+      </div>
+      <div className='slideshow-root'>
+        <p>Placeholder for slideshow</p>
       </div>
     </div>
   );
