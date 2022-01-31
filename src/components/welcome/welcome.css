@@ -1,28 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap');
+
 .intro-root {
   background-image: url(https://thumbs.gfycat.com/ConcreteSnarlingBlackfish-size_restricted.gif);
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-position: 50% 0px;
   background-attachment: fixed;
   height: 100vh;
   width: 100vw;
+  background-size: calc(100vmax) calc(100vh);
 }
 
-.intro-text-title {
+.intro-text {
   text-align: center;
-  font-size: calc(10px + 5vmin);
-  font-family: cursive;
+  font-family: 'Dancing Script', cursive;
   color: rgb(218, 218, 218);
+  text-shadow: 1px 1px 8px black;
   margin-block-start: 0;
   position: relative;
   top: calc(5px + 10vh);
 }
 
+.intro-text-title {
+  font-size: calc(50px + 5vmin);
+}
+
 .intro-text-date {
-  text-align: center;
-  font-size: calc(5px + 3vmin);
-  font-family: fantasy;
-  color: rgb(218, 218, 218);
-  position: relative;
-  top: calc(5px + 10vh);
+  font-size: calc(8px + 5vmin);
 }
