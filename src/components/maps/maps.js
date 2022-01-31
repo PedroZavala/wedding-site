@@ -16,9 +16,10 @@ function Maps() {
             <p>Get directions to the party!</p>
             <div className='maps-center'>
                 <div>
-                    <a href={appleMapsUrl}><img className='maps-icon' src={appleMapsLogo}></img></a>
-                    <a href={googleMapsUrl}><img className='maps-icon' src={googleMapsLogo}></img></a>
-                    <a href={wazeMapsUrl}><img className='maps-icon' src={wazeMapsLogo}></img></a>
+                    {/* To replace href with proper vars when deploying final release */}
+                    <a href={"https://google.com"}><img className='maps-icon' src={appleMapsLogo}></img></a>
+                    <a href={"https://google.com"}><img className='maps-icon' src={googleMapsLogo}></img></a>
+                    <a href={"https://google.com"}><img className='maps-icon' src={wazeMapsLogo}></img></a>
                 </div>
             </div>
         </div>
