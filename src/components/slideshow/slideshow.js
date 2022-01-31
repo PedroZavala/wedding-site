@@ -55,10 +55,12 @@ const itemData = [
 ];
 
 function Slideshow() {
+    const numColumns = window.outerWidth <= 500 ? 2 : 3;
+    
     return (
         <div className='slideshow-root'>
-            <Box className='slideshow-content' sx={{ overflowY: 'unscrollable' }}>
-                <ImageList variant="masonry" cols={2} gap={10}>
+            <Box className='slideshow-content' sx={{ overflowY: '-moz-hidden-unscrollable' }}>
+                <ImageList variant="quilted" cols={numColumns} gap={6}>
                     {itemData.map((item) => (
                     <ImageListItem key={item.img}>
                         <img

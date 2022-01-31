@@ -1,10 +1,8 @@
 .slideshow-root {
-    width: 100vw;
+    width: 100%;
 }
 
 .slideshow-content {
     align-content: center;
     position: relative;
-    margin-left: 5vw;
-    margin-right: 5vw;
 }
