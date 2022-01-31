@@ -1,4 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap');
+
 .maps-root {
-    background-color: #2c4e91;
-    height: 100px
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: calc(15px + 4vw);    
+}
+
+.maps-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.maps-icon {
+    width: calc(150px + 8vw);
+    height: calc(150px + 8vw);    
+    border-radius: 35%;
+    padding: 3vw;
 }
