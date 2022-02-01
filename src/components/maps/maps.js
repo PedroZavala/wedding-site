@@ -14,7 +14,7 @@ function Maps() {
     return (
         <div className='maps-root'>
             <p className='maps-title'>Directions</p>
-            <div className='maps-center'>
+            <div className='maps-content'>
                 <div>
                     {/* To replace href with proper vars when deploying final release */}
                     <a href={"https://google.com"}><img className='maps-icon' src={appleMapsLogo}></img></a>

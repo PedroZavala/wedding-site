@@ -6,20 +6,6 @@
 
 .maps-title {
     margin: 20px;
-    box-sizing: border-box;
-    border: 5px solid #000;
-    position: relative;
-}
-
-.maps-title:after {
-    content: " ";
-    display: block;
-    position: absolute;
-    height: 5px;
-    background: black;
-    width: 40px;
-    left: 100%;
-    top: calc(50% - 2px);
 }
 
 .maps-content {
