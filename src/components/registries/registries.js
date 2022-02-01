@@ -1,7 +1,10 @@
 import './registries.css'
 
-const r1Url = 'https://google.com';
-const r1Logo = 'https://is5-ssl.mzstatic.com/image/thumb/Purple126/v4/3b/d7/61/3bd76166-6403-0ffd-dbf8-dfbc4967485e/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/246x0w.webp';
+const targetUrl = 'https://target.com';
+const targetLogo = 'https://is3-ssl.mzstatic.com/image/thumb/Purple116/v4/05/ef/6e/05ef6edc-bebf-73ab-04e7-a2993e365509/AppIconShiny-0-1x_U007emarketing-0-7-0-85-220.png/246x0w.webp';
+
+const amazonUrl = 'https://amazon.com';
+const amazonLogo = 'https://is4-ssl.mzstatic.com/image/thumb/Purple116/v4/0d/cf/e7/0dcfe7a0-0343-4a1d-5294-617ddf488340/AppIcon-1x_U007emarketing-0-6-0-0-85-220-0.png/246x0w.webp'
 
 function Registries() {
     return (
@@ -9,8 +12,8 @@ function Registries() {
             <p className='registries-title'>Our Registries</p>
             <div className='registries-center'>
                 <div>
-                    <a href={"https://target.com"}><img className='registries-icon' src={r1Logo}></img></a>
-                    <a href={r1Url}><img className='registries-icon' src={r1Logo}></img></a>
+                    <a href={amazonUrl}><img className='registries-icon' src={amazonLogo}></img></a>
+                    <a href={targetUrl}><img className='registries-icon' src={targetLogo}></img></a>
                 </div>
             </div>
         </div>
