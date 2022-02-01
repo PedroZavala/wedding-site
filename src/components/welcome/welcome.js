@@ -6,10 +6,8 @@ import { styled } from '@mui/material/styles';
 const RSVPButton = styled(Button)(() => ({
     color: '#ffffff',
     fontSize: '3vh',
-    position: 'relative',
     left: '50%',
     transform: 'translateX(-50%)',
-    top: 'calc(100px + 10vh)',
     backgroundColor: '#000000',
     '&:hover': {
       backgroundColor: '#000000',
@@ -17,14 +15,18 @@ const RSVPButton = styled(Button)(() => ({
   }));
 
 function Welcome() {
-    const backgroundImgSize= window.outerWidth <= 500 ? 'cover' : 'cover';
-
     return (
-        <div className='intro-root'>
-            <h1 className='intro-text intro-text-title'>Zavala Wedding</h1>
-            <p className='intro-text intro-text-date'>September 10, 2022</p>
+        <div className='welcome-root'>
+          <div className='welcome-text-box'>
+              <h1 className='welcome-text welcome-text-title'>Zavala Wedding</h1>
+              <p className='welcome-text welcome-text-date'>September 10, 2022</p>              
+          </div>
+          <div className='welcome-rsvp-box'>
             <RSVPButton variant="contained">RSVP</RSVPButton>
+          </div>
+          <div className='welcome-countdown-box'>
             <Countdown/>
+          </div>
         </div>
     );
 }

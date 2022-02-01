@@ -3,7 +3,7 @@ import './countdown.css'
 function Countdown() {
     return (
         <div className='countdown-root'>
-            <p>Placeholder for countdown</p>
+            <p className='countdown-text countdown-content'>Placeholder for countdown</p>
         </div>
      );
 }

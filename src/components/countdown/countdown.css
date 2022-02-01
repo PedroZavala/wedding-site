@@ -1,5 +1,15 @@
 .countdown-root {
-    font-size: calc(10px + 3vmin);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.countdown-text {
     text-align: center;
-    margin-top: calc(200px + 10vh);
+    font-family: 'Dancing Script', cursive;
+    color: rgb(218, 218, 218);
+    text-shadow: 1px 1px 8px black;
+    font-size: 7vmin;   
 }

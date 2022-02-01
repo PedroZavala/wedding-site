@@ -13,7 +13,7 @@ const wazeMapsLogo = 'https://is5-ssl.mzstatic.com/image/thumb/Purple126/v4/3b/d
 function Maps() {
     return (
         <div className='maps-root'>
-            <p>Get directions to the party!</p>
+            <p className='maps-title'>Get directions to the party!</p>
             <div className='maps-center'>
                 <div>
                     {/* To replace href with proper vars when deploying final release */}
