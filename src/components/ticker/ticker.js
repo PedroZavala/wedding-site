@@ -16,10 +16,22 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
     // Render a countdown
     return (
       <div className='ticker-content'>
-        <div className='ticker-text ticker-text-ticking'><p>Days</p><p>{days}</p></div>
-        <div className='ticker-text ticker-text-ticking'><p>Hours</p><p>{hours}</p></div>
-        <div className='ticker-text ticker-text-ticking'><p>Minutes</p><p>{minutes}</p></div>
-        <div className='ticker-text ticker-text-ticking'><p>Seconds</p><p>{seconds}</p></div>        
+        <div className='ticker-text'>
+          <p className='ticker-text-ticking-header'>Days</p>
+          <p className='ticker-text-ticking-num'>{days}</p>
+        </div>
+        <div className='ticker-text'>
+          <p className='ticker-text-ticking-header'>Hours</p>
+          <p className='ticker-text-ticking-num'>{hours}</p>
+        </div>
+        <div className='ticker-text'>
+          <p className='ticker-text-ticking-header'>Minutes</p>
+          <p className='ticker-text-ticking-num'>{minutes}</p>
+        </div>
+        <div className='ticker-text'>
+          <p className='ticker-text-ticking-header'>Seconds</p>
+          <p className='ticker-text-ticking-num'>{seconds}</p>
+        </div>      
       </div>
     );
   }

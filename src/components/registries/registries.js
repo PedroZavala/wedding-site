@@ -9,7 +9,7 @@ const amazonLogo = 'https://is4-ssl.mzstatic.com/image/thumb/Purple116/v4/0d/cf/
 function Registries() {
     return (
         <div className='registries-root'>
-            <p className='registries-title'>Our Registries</p>
+            <p className='registries-title'>Gift Registry</p>
             <div className='registries-center'>
                 <div>
                     <a href={amazonUrl}><img className='registries-icon' src={amazonLogo}></img></a>

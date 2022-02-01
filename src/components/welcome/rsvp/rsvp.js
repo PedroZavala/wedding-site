@@ -59,7 +59,8 @@ const Rsvp = () => {
 
     const RsvpButton = styled(Button)(() => ({
         color: '#ffffff',
-        fontSize: '3vh',
+        fontSize: '4vmin',
+        width: '12%',
         left: '50%',
         transform: 'translateX(-50%)',
         backgroundColor: '#000000',

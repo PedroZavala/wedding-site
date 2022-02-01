@@ -1,16 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap');
-
 .maps-root {
     text-align: center;
-    font-family: 'Oswald', sans-serif;
-    font-size: calc(15px + 4vw);    
+    font-family: 'Playfair Display SC', serif;
+    font-size: 7vmin;    
 }
 
 .maps-title {
     margin: 20px;
+    box-sizing: border-box;
+    border: 5px solid #000;
+    position: relative;
 }
 
-.maps-center {
+.maps-title:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    height: 5px;
+    background: black;
+    width: 40px;
+    left: 100%;
+    top: calc(50% - 2px);
+}
+
+.maps-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
