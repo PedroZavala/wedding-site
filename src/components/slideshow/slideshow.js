@@ -60,7 +60,7 @@ function Slideshow() {
     return (
         <div className='slideshow-root'>
             <Box className='slideshow-content' sx={{ overflowY: 'visible' }}>
-                <ImageList variant="quilted" cols={numColumns} gap={6}>
+                <ImageList variant="masonry" cols={numColumns} gap={6}>
                     {itemData.map((item) => (
                     <ImageListItem key={item.img}>
                         <img
