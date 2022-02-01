@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400&display=swap');
 
 .welcome-root {
-  background-image: url(https://thumbs.gfycat.com/ConcreteSnarlingBlackfish-size_restricted.gif);
   background-repeat: no-repeat;
   background-position: 50% 0px;
   background-attachment: fixed;
@@ -32,7 +31,7 @@
 }
 
 .welcome-text-title {
-  padding-top: 2vmax;
+  padding-top: 6vmax;
   font-size: 15vmin;  
 }
 
