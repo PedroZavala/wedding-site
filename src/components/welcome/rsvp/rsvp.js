@@ -38,7 +38,7 @@ const Rsvp = () => {
         transform: 'translateX(-50%)',
         backgroundColor: '#000000',
         '&:hover': {
-            backgroundColor: '#000000',
+            backgroundColor: 'rgb(80, 80, 80)',
         },
     }));
 
