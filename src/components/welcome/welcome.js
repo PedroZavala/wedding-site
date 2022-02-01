@@ -1,5 +1,5 @@
 import './welcome.css'
-import Countdown from '../countdown/countdown'
+import Ticker from '../ticker/ticker'
 import Rsvp from './rsvp/rsvp';
 
 function Welcome() {
@@ -13,7 +13,7 @@ function Welcome() {
             <Rsvp/>
           </div>
           <div className='welcome-countdown-box'>
-            <Countdown/>
+            <Ticker/>
           </div>
         </div>
     );
