@@ -17,8 +17,8 @@
 }
 
 .maps-icon {
-    width: calc(100px + 8vmin);
-    height: calc(100px + 8vmin);    
+    width: calc(100px + 6vmax);
+    height: calc(100px + 6vmax);    
     border-radius: 35%;
-    padding: 3vmin;
+    padding: 8vmin;
 }
