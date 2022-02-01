@@ -75,9 +75,9 @@ const Rsvp = () => {
             <DialogTitle>RSVP</DialogTitle>
             <DialogContent>
                 <DialogContentText>
-                    We are excited you will be a part of our wedding! 
+                    We are excited that you will be a part of our wedding! 
                     Please let us know how many total guests (including kids)
-                    will be joining our special day.
+                    will be joining us.
                 </DialogContentText>
                 <TextField onChange={(e) => handleFormNameInput(e)}
                     margin="dense"
@@ -90,7 +90,7 @@ const Rsvp = () => {
                 />
                 <TextField onChange={(e) => handleFormGuestCountInput(e)}
                     margin="dense"                    
-                    label="Total Guest Count"
+                    label="Guest Count"
                     type="number"                    
                     variant="standard"
                     required
