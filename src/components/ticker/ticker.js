@@ -1,7 +1,8 @@
 import './ticker.css'
 import Countdown from 'react-countdown';
 
-const weddingDate = '2022-09-10T18:00:00'
+// Github server in EST, adjust for CST
+const weddingDate = '2022-09-10T19:00:00'
 
 // Renderer callback with condition
 const renderer = ({ days, hours, minutes, seconds, completed }) => {
@@ -9,7 +10,7 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
     // Render a completed state
     return (
       <div className='ticker-content'>
-        <div className='ticker-text ticker-text-done'><p>It's Time!!</p></div>       
+        <div className='ticker-text ticker-text-done'><p>It's Time!!</p></div>
       </div>
     );
   } else {
@@ -31,7 +32,7 @@ const renderer = ({ days, hours, minutes, seconds, completed }) => {
         <div className='ticker-text'>
           <p className='ticker-text-ticking-header'>Seconds</p>
           <p className='ticker-text-ticking-num'>{seconds}</p>
-        </div>      
+        </div>
       </div>
     );
   }
@@ -44,5 +45,5 @@ const Ticker = () => {
         </div>
     );
 }
- 
+
 export default Ticker;
