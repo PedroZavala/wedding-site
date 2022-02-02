@@ -19,7 +19,7 @@ const Rsvp = () => {
     const [inputNameError, setInputNameError] = React.useState(true);
     const [inputAdultCountError, setInputAdultCountError] = React.useState(true);
     const [inputChildrenCountError, setInputChildrenCountError] = React.useState(true);
-    
+
     const handleRsvpClickOpen = () => {
         setOpen(true);
     };
@@ -85,7 +85,7 @@ const Rsvp = () => {
             <DialogTitle>RSVP</DialogTitle>
             <DialogContent>
                 <DialogContentText>
-                    We are excited that you will be a part of our wedding! 
+                    We are excited that you will be a part of our wedding!
                     Please let us know how many total guests (including kids)
                     will be joining us.
                 </DialogContentText>
@@ -135,5 +135,5 @@ const Rsvp = () => {
         </div>
     );
 }
- 
+
 export default Rsvp;
