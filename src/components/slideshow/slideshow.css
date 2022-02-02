@@ -1,9 +1,9 @@
 .slideshow-root {
-    width: 100%;  
+    width: 100%;
     pointer-events: none;
 }
 
 .slideshow-content {
     align-content: center;
-    position: relative;    
+    position: relative;
 }

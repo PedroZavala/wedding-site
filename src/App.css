@@ -1,4 +1,4 @@
-.main-root {
+.content-root {
   height: 100%;
   width: 100%;
 }
@@ -11,10 +11,10 @@ h1 {
   margin: 0px;
 }
 
-.grow { 
-  transition: all .2s ease-in-out; 
+.grow {
+  transition: all .2s ease-in-out;
 }
 
-.grow:hover { 
+.grow:hover {
   transform: scale(1.1);
 }

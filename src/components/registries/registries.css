@@ -1,7 +1,7 @@
 .registries-root {
     text-align: center;
     font-family: 'Playfair Display SC', serif;
-    font-size: 6vmin;    
+    font-size: 6vmin;
 }
 
 .registries-title {
@@ -16,7 +16,7 @@
 
 .registries-icon {
     width: calc(100px + 6vmin);
-    height: calc(100px + 6vmin);    
+    height: calc(100px + 6vmin);
     border-radius: 35%;
     padding: 8vmin;
 }

@@ -1,7 +1,7 @@
 .maps-root {
     text-align: center;
     font-family: 'Playfair Display SC', serif;
-    font-size: 7vmin;    
+    font-size: 7vmin;
 }
 
 .maps-title {
@@ -16,7 +16,7 @@
 
 .maps-icon {
     width: calc(100px + 6vmax);
-    height: calc(100px + 6vmax);    
+    height: calc(100px + 6vmax);
     border-radius: 35%;
     padding: 8vmin;
 }
