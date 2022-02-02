@@ -12,8 +12,8 @@ function Registries() {
             <p className='registries-title'>Gift Registry</p>
             <div className='registries-center'>
                 <div>
-                    <a href={amazonUrl}><img className='registries-icon' src={amazonLogo}></img></a>
-                    <a href={targetUrl}><img className='registries-icon' src={targetLogo}></img></a>
+                    <a href={amazonUrl}><img className='registries-icon grow' src={amazonLogo}></img></a>
+                    <a href={targetUrl}><img className='registries-icon grow' src={targetLogo}></img></a>
                 </div>
             </div>
         </div>

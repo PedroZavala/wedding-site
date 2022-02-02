@@ -16,9 +16,9 @@ function Maps() {
             <div className='maps-content'>
                 <div>
                     {/* To replace href with proper vars when deploying final release */}
-                    <a href={"https://google.com"}><img className='maps-icon' src={appleMapsLogo}></img></a>
-                    <a href={"https://google.com"}><img className='maps-icon' src={googleMapsLogo}></img></a>
-                    <a href={"https://google.com"}><img className='maps-icon' src={wazeMapsLogo}></img></a>
+                    <a href={"https://google.com"}><img className='maps-icon grow' src={appleMapsLogo}></img></a>
+                    <a href={"https://google.com"}><img className='maps-icon grow' src={googleMapsLogo}></img></a>
+                    <a href={"https://google.com"}><img className='maps-icon grow' src={wazeMapsLogo}></img></a>
                 </div>
             </div>
         </div>

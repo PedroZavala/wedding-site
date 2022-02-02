@@ -16,8 +16,9 @@ const Rsvp = () => {
     const [open, setOpen] = React.useState(false);
     const [submit, setSubmit] = React.useState(false);
     const [submitDisabled, setSubmitDisabled] = React.useState(true);
-    const [inputNameError, setInputNameError] = React.useState(false);
-    const [inputGuestCountError, setInputGuestCountError] = React.useState(false);
+    const [inputNameError, setInputNameError] = React.useState(true);
+    const [inputAdultCountError, setInputAdultCountError] = React.useState(true);
+    const [inputChildrenCountError, setInputChildrenCountError] = React.useState(true);
     
     const handleRsvpClickOpen = () => {
         setOpen(true);
@@ -28,20 +29,28 @@ const Rsvp = () => {
         inputNameRegex.test(e.target.value) ? result = false : result = true;
 
         setInputNameError(result);
-        toggleSubmit(result, inputGuestCountError);
+        toggleSubmit(result, inputAdultCountError, inputChildrenCountError);
     };
 
-    const handleFormGuestCountInput = (e) => {
+    const handleFormAdultCountInput = (e) => {
         var result = false;
-        (e.target.value > 0 && e.target.value <= 15) ? result = false : result = true;
+        (e.target.value > 0 && e.target.value <= 10) ? result = false : result = true;
 
-        setInputGuestCountError(result)
-        toggleSubmit(result, inputNameError);
+        setInputAdultCountError(result)
+        toggleSubmit(result, inputNameError, inputChildrenCountError);
+    };
+
+    const handleFormChildrenCountInput = (e) => {
+        var result = false;
+        (e.target.value > 0 && e.target.value <= 10) ? result = false : result = true;
+
+        setInputChildrenCountError(result)
+        toggleSubmit(result, inputNameError, inputAdultCountError);
     };
 
     // Passing in vars instead of ref becuase of a out of state issue
-    const toggleSubmit = (v1, v2) => {
-        v1 || v2 ? setSubmitDisabled(true) : setSubmitDisabled(false);
+    const toggleSubmit = (v1, v2, v3) => {
+        v1 || v2 || v3 ? setSubmitDisabled(true) : setSubmitDisabled(false);
     };
 
     const handleFormClose = () => {
@@ -59,7 +68,7 @@ const Rsvp = () => {
 
     const RsvpButton = styled(Button)(() => ({
         color: '#ffffff',
-        fontSize: '4vmin',
+        fontSize: '3vmin',
         width: '12%',
         left: '50%',
         transform: 'translateX(-50%)',
@@ -80,23 +89,37 @@ const Rsvp = () => {
                     Please let us know how many total guests (including kids)
                     will be joining us.
                 </DialogContentText>
+                <div>
                 <TextField onChange={(e) => handleFormNameInput(e)}
                     margin="dense"
                     label="First and Last Name"
                     type="text"
                     fullWidth
-                    variant="standard"                    
-                    required                    
-                    error={inputNameError}
-                />
-                <TextField onChange={(e) => handleFormGuestCountInput(e)}
-                    margin="dense"                    
-                    label="Guest Count"
-                    type="number"                    
                     variant="standard"
                     required
-                    error={inputGuestCountError}
+                    error={inputNameError}
                 />
+                </div>
+                <div>
+                <TextField onChange={(e) => handleFormAdultCountInput(e)}
+                    margin="dense"
+                    label="Adult Count"
+                    type="number"
+                    variant="standard"
+                    required
+                    error={inputAdultCountError}
+                />
+                </div>
+                <div>
+                <TextField onChange={(e) => handleFormChildrenCountInput(e)}
+                    margin="dense"
+                    label="Children Count"
+                    type="number"
+                    variant="standard"
+                    required
+                    error={inputChildrenCountError}
+                />
+                </div>
             </DialogContent>
             <DialogActions>
                 <Button onClick={handleFormClose}>Cancel</Button>
