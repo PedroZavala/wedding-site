@@ -1,9 +1,9 @@
-.slideshow-root {
+.picgrid-root {
     width: 100%;
     pointer-events: none;
 }
 
-.slideshow-content {
+.picgrid-content {
     align-content: center;
     position: relative;
 }
