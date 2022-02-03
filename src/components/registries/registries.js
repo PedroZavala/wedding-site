@@ -6,7 +6,7 @@ const targetLogo = 'https://is3-ssl.mzstatic.com/image/thumb/Purple116/v4/05/ef/
 const amazonUrl = 'https://www.amazon.com/wedding/pedro-zavala-ashley-rodriguez--september-2022/registry/2B6J0WWRXKGOK';
 const amazonLogo = 'https://is4-ssl.mzstatic.com/image/thumb/Purple116/v4/0d/cf/e7/0dcfe7a0-0343-4a1d-5294-617ddf488340/AppIcon-1x_U007emarketing-0-6-0-0-85-220-0.png/246x0w.webp'
 
-function Registries() {
+const Registries = () => {
     return (
         <div className='registries-root'>
             <p className='registries-title'>Gift Registry</p>
@@ -17,7 +17,7 @@ function Registries() {
                 </div>
             </div>
         </div>
-    );  
+    );
 }
 
 export default Registries;

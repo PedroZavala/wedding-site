@@ -9,7 +9,7 @@ const googleMapsLogo = 'https://is5-ssl.mzstatic.com/image/thumb/Purple126/v4/9b
 const wazeMapsUrl = 'https://waze.com/ul/h9v7gukpec';
 const wazeMapsLogo = 'https://is5-ssl.mzstatic.com/image/thumb/Purple126/v4/3b/d7/61/3bd76166-6403-0ffd-dbf8-dfbc4967485e/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/246x0w.webp';
 
-function Maps() {
+const Maps = () => {
     return (
         <div className='maps-root'>
             <p className='maps-title'>Directions</p>
