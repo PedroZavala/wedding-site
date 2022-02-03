@@ -1,4 +1,22 @@
 .registries-root {
-    background-color: #282c34;
-    height: 100px;
+    text-align: center;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 6vmin;
+}
+
+.registries-title {
+    padding: 3vmin;
+}
+
+.registries-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.registries-icon {
+    width: calc(100px + 6vmin);
+    height: calc(100px + 6vmin);
+    border-radius: 35%;
+    padding: 8vmin;
 }

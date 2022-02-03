@@ -1,4 +1,9 @@
 .slideshow-root {
-    background-color: #357c50;
-    height: 100px
+    width: 100%;
+    pointer-events: none;
+}
+
+.slideshow-content {
+    align-content: center;
+    position: relative;
 }

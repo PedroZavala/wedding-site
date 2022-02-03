@@ -1,14 +1,26 @@
 import './welcome.css'
-import Countdown from '../countdown/countdown'
+import Ticker from '../ticker/ticker'
+import Rsvp from './rsvp/rsvp';
+import image from '../../assets/images/welcome-image.jpeg'
 
-function Welcome() {
+const Welcome = () => {
     return (
-        <div className='intro-root'>
-            <div className='intro-welcome'>
-                <h1 className='intro-text-title'>Zavala Wedding</h1>
-                <p className='intro-text-date'>September 10, 2022</p>
-                <Countdown/>
-            </div>
+        <div className='welcome-root'>
+          <div>
+            <img className='background-img' src={image}></img>
+          </div>
+          <div className='welcome-text-box'>
+              <p className='welcome-text welcome-text-title'>Ashley</p>
+              <p className='welcome-text welcome-text-split'>and</p>
+              <p className='welcome-text welcome-text-title'>Pedro</p>
+              <p className='welcome-text welcome-text-date'>09.10.22</p>
+          </div>
+          <div className='welcome-rsvp-box'>
+            <Rsvp/>
+          </div>
+          <div className='welcome-countdown-box'>
+            <Ticker/>
+          </div>
         </div>
     );
 }
