@@ -3,10 +3,12 @@ import Ticker from '../ticker/ticker'
 import Rsvp from './rsvp/rsvp';
 import image from '../../assets/images/welcome-image.jpeg'
 
-function Welcome() {
+const Welcome = () => {
     return (
         <div className='welcome-root'>
-          <div className="background-wrap" style={{backgroundImage: `url(${image})`}}></div>
+          <div>
+            <img className='background-img' src={image}></img>
+          </div>
           <div className='welcome-text-box'>
               <p className='welcome-text welcome-text-title'>Ashley</p>
               <p className='welcome-text welcome-text-split'>and</p>

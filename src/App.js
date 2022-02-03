@@ -7,11 +7,13 @@ import Maps from './components/maps/maps'
 function App() {
   return (
     <>
-      <div className='content-root'>
+      <div className='main-root'>
         <Welcome/>
-        <Registries/>
-        <Slideshow/>
-        <Maps/>
+        <div className='content-root'>
+          <Registries/>
+          <Slideshow/>
+          <Maps/>
+        </div>
       </div>
     </>
   );
