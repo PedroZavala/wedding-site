@@ -2,7 +2,7 @@ import './App.css';
 import Welcome from './components/welcome/welcome';
 import Story from './components/story/story';
 import Registries from './components/registries/registries';
-import Slideshow from './components/slideshow/slideshow';
+import PicGrid from './components/picgrid/picgrid';
 import Maps from './components/maps/maps'
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
         <Welcome/>
         <div className='content-root'>
           <Story/>
-          <Slideshow/>
+          <PicGrid/>
           <Registries/>
           <Maps/>
         </div>

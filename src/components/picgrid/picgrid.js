@@ -1,4 +1,4 @@
-import './slideshow.css'
+import './picgrid.css'
 import React from 'react';
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
@@ -15,12 +15,12 @@ const itemData = [
     'valentines.jpg'
 ];
 
-const Slideshow = () => {
+const PicGrid = () => {
     const numColumns = window.outerWidth <= 500 ? 2 : 3;
 
     return (
-        <div className='slideshow-root'>
-            <Box className='slideshow-content' sx={{ overflowY: 'visible' }}>
+        <div className='picgrid-root'>
+            <Box className='picgrid-content' sx={{ overflowY: 'visible' }}>
                 <ImageList variant="masonry" cols={numColumns} gap={6}>
                     {itemData.map((imageName) => (
                     <ImageListItem key={imageName}>
@@ -37,4 +37,4 @@ const Slideshow = () => {
     );
 }
 
-export default Slideshow;
+export default PicGrid;
