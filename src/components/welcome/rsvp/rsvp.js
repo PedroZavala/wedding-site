@@ -1,3 +1,4 @@
+import './rsvp.css';
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
@@ -67,14 +68,17 @@ const Rsvp = () => {
     };
 
     const RsvpButton = styled(Button)(() => ({
-        color: '#ffffff',
-        fontSize: '3vmin',
-        width: '12%',
         left: '50%',
+        color: '#ffffff',
+        lineHeight: 'calc(25px + 3vmin)',
+        fontSize: 'calc(15px + 2vmin)',
+        width: 'calc(80px + 5vmin)',
         transform: 'translateX(-50%)',
+        fontFamily: '\'Playfair Display SC\', serif',
+        boxShadow: '1px 1px 8px rgb(180, 180, 180)',
         backgroundColor: '#000000',
         '&:hover': {
-            backgroundColor: 'rgb(80, 80, 80)',
+            backgroundColor: 'rgb(50, 50, 50)',
         },
     }));
 
@@ -84,10 +88,9 @@ const Rsvp = () => {
         <Dialog open={open} onClose={handleFormClose}>
             <DialogTitle>RSVP</DialogTitle>
             <DialogContent>
-                <DialogContentText>
+                <DialogContentText className='rsvp-info'>
                     We are excited that you will be a part of our wedding!
-                    Please let us know how many total guests (including kids)
-                    will be joining us.
+                    Please let us know how many guests will be joining us.
                 </DialogContentText>
                 <div>
                 <TextField onChange={(e) => handleFormNameInput(e)}
