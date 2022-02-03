@@ -1,0 +1,28 @@
+.story-root {
+    height: auto;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.story-text-title {
+    padding: 20px;
+    font-size: 7vmin;
+    font-family: 'Playfair Display SC', serif;
+    display : block;
+}
+
+.story-text-title:after {
+    content: '';
+    border-bottom: 2px solid rgb(231, 220, 114);
+    width: 50vmin;
+    display: block;
+    margin: 20px auto;
+}
+
+.story-text-content {
+    margin-left: 15%;
+    margin-right: 15%;
+    display: block;
+    font-size: 4vmin;
+    font-family: 'Dancing Script', cursive;
+}
