@@ -6,13 +6,21 @@ import ImageListItem from '@mui/material/ImageListItem';
 
 // Images appear top -> bottom in column order
 const itemData = [
-    '8-anniv.jpg',
     '360-bridge.jpg',
+    '8-anniv.jpg',
+    'atx-luvu.jpg',
+    'graf-park.jpg',
+    'jaki-15-center.jpg',
+    'jaki-15.jpg',
     'market-square.jpg',
+    'mustache.jpg',
     'p-bday.jpg',
     'ring-eng.jpg',
     'ring.jpg',
-    'valentines.jpg'
+    'sa-river.jpg',
+    'uh-fnt.png',
+    'uh-rec.jpg',
+    'valentines.jpg',
 ];
 
 const PicGrid = () => {

@@ -1,4 +1,4 @@
-.container-slider {  
+.container-slider {
   height: 100vh;
   margin: 100px auto 0;
   position: relative;
@@ -7,7 +7,7 @@
 }
 @media screen and (max-width: 700px){
   .container-slider {
-    margin: 100px 10px 0;
+    margin: 100px 0 0;
   }
 }
 .slide {

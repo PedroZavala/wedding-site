@@ -5,7 +5,7 @@ import dataSlider from './dataSlider'
 
 const Slider = () => {
 
-    const sliderWidth = window.outerWidth <= 500 ? '100vw' : '80vw';
+    const sliderWidth = window.outerWidth <= 1100 ? '100vw' : '80vw';
     const [slideIndex, setSlideIndex] = useState(1);
 
     const nextSlide = () => {
