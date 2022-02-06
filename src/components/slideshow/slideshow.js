@@ -1,18 +1,22 @@
+import './slideshow.css'
 import React, {useState} from 'react'
-import './slider.css'
-import BtnSlider from './BtnSlider'
-import dataSlider from './dataSlider'
+import SlideshowArrow from './slideshowArrow'
 
 const Slider = () => {
+    const slidesCount = 5;
 
-    const sliderWidth = window.outerWidth <= 1100 ? '100vw' : '80vw';
+    const sliderWidth = window.outerWidth <= 1100 ? '100vw' : '100vw';
     const [slideIndex, setSlideIndex] = useState(1);
 
+    React.useEffect(() => {
+        setTimeout(() => nextSlide(), 5000);
+    });
+
     const nextSlide = () => {
-        if(slideIndex !== dataSlider.length){
+        if(slideIndex !== slidesCount){
             setSlideIndex(slideIndex + 1)
-        } 
-        else if (slideIndex === dataSlider.length){
+        }
+        else if (slideIndex === slidesCount){
             setSlideIndex(1)
         }
     }
@@ -22,7 +26,7 @@ const Slider = () => {
             setSlideIndex(slideIndex - 1)
         }
         else if (slideIndex === 1){
-            setSlideIndex(dataSlider.length)
+            setSlideIndex(slidesCount)
         }
     }
 
@@ -32,29 +36,29 @@ const Slider = () => {
 
     return (
         <div className="container-slider" style={{width: sliderWidth}}>
-            {dataSlider.map((obj, index) => {
+            {Array.from({length: slidesCount}).map((i, index) => {
                 return (
                     <div
-                    key={obj.id}
+                    key={index}
                     className={slideIndex === index + 1 ? "slide active-anim" : "slide"}
                     >
-                        <img 
-                        src={ `/images/slideshow/img${index + 1}.jpg`} 
-                        />
+                        <img key={index} src={`/images/slideshow/img${index + 1}.jpg`} />
                     </div>
                 )
             })}
-            <BtnSlider moveSlide={nextSlide} direction={"next"} />
-            <BtnSlider moveSlide={prevSlide} direction={"prev"}/>
+
+            {/* <SlideshowArrow moveSlide={nextSlide} direction={"next"} />
+            <SlideshowArrow moveSlide={prevSlide} direction={"prev"}/>
 
             <div className="container-dots">
-                {Array.from({length: 5}).map((item, index) => (
-                    <div 
+                {Array.from({length: slidesCount}).map((i, index) => (
+                    <div
+                    key={index}
                     onClick={() => moveDot(index + 1)}
                     className={slideIndex === index + 1 ? "dot active" : "dot"}
                     ></div>
                 ))}
-            </div>
+            </div> */}
         </div>
     )
 }
