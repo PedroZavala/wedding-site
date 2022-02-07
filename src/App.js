@@ -4,6 +4,7 @@ import Story from './components/story/story';
 import Registries from './components/registries/registries';
 import PicGrid from './components/picgrid/picgrid';
 import Maps from './components/maps/maps'
+import Timeline from './components/timeline/timeline';
 
 const picGrid1 = [
   '360-bridge.jpg',
@@ -33,10 +34,10 @@ const App = () => {
         {/* See backgroundShift component for parallel scrolling
         effects when disabling background color in div box */}
         <div className='content-section-2'>
-          <Maps/>
+          <Timeline/>
         </div>
         <div className='content-section-3'>
-          {/* <Maps/> */}
+          <Maps/>
         </div>
       </div>
     </>

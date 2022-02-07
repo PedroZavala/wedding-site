@@ -1,0 +1,16 @@
+.timeline-root {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.timeline-title {
+    padding: 20px;
+    font-size: 7vmin;
+    font-family: 'Playfair Display SC', serif;
+}
+
+.timeline-img {
+    height: auto;
+}
