@@ -11,14 +11,6 @@
     display : block;
 }
 
-.story-text-title:after {
-    content: '';
-    border-bottom: 2px solid rgb(210, 191, 55);
-    width: 50vmin;
-    display: block;
-    margin: 20px auto;
-}
-
 .story-text-content {
     margin-left: 10%;
     margin-right: 10%;

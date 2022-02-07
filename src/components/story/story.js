@@ -2,8 +2,8 @@ import './story.css'
 
 const Story = () => {
     return (
-        <div className='story-root'>
-            <div className='story-text-title'>
+        <div className='story-root' id='our-story'>
+            <div className='story-text-title gold-underline'>
                 <p>Our Story</p>
             </div>
             <div className='story-text-content'>
