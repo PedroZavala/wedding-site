@@ -88,6 +88,7 @@ const Rsvp = () => {
     const handleFormSubmit = () => {
         setOpen(false);
         resetState();
+        setSubmit(true);
         sendEmail();
 
         //timeout for submitted msg
