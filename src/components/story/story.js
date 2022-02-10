@@ -1,10 +1,18 @@
 import './story.css'
+import { scrollHook_getDynamicMarginYPosition } from '../util/scrollHooks';
 
 const Story = () => {
+    const scrollYBreak = 600;
+    const titleHiddenTopMargin = 70;
+
+    const getDynamicTopMargin = () => {
+        return -1 * scrollHook_getDynamicMarginYPosition(scrollYBreak, titleHiddenTopMargin);
+    }
+
     return (
         <div className='story-root' id='our-story'>
-            <div className='story-text-title gold-underline'>
-                <p>Our Story</p>
+            <div className='story-text-title-div gold-underline'>
+                <p className='story-text-title' style={{top: `${getDynamicTopMargin()}px`}}>Our Story</p>
             </div>
             <div className='story-text-content'>
                 <p>Once upon a time, there was a little girl who lived in a village near the forest.  Whenever she went out, the little girl wore a red riding cloak, so everyone in the village called her Little Red Riding Hood.

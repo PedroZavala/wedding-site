@@ -4,11 +4,16 @@
     text-align: center;
 }
 
-.story-text-title {
+.story-text-title-div {
     padding: 20px;
+    display : block;
+    overflow: hidden;
+}
+
+.story-text-title {
     font-size: 7vmin;
     font-family: 'Playfair Display SC', serif;
-    display : block;
+    position: relative;
 }
 
 .story-text-content {
