@@ -1,22 +1,29 @@
 .maps-root {
     text-align: center;
-    font-family: 'Playfair Display SC', serif;
-    font-size: 7vmin;
 }
 
 .maps-title {
     padding: 20px;
+    font-size: 7vmin;
+    font-family: 'Playfair Display SC', serif;
 }
 
-.maps-content {
+.maps-icons-wrap {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .maps-icon {
-    width: calc(100px + 6vmax);
-    height: calc(100px + 6vmax);
+    width: calc(100px + 5vmin);
+    height: calc(100px + 5vmin);
     border-radius: 35%;
-    padding: 8vmin;
+    margin-left: 7vmin;
+    margin-right: 7vmin;
+    margin-bottom: 5vmin;
+}
+
+.maps-image-info {
+    height: auto;
+    margin-bottom: 20px;
 }

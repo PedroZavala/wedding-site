@@ -10,6 +10,7 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
+import emailjs from '@emailjs/browser';
 
 const Rsvp = () => {
     const initState = {
@@ -21,7 +22,6 @@ const Rsvp = () => {
     };
 
     const inputNameRegex = new RegExp('(.{2,} .{2,})');
-    const [rsvpData, setRsvpData] = React.useState([]);
 
     const [open, setOpen] = React.useState(false);
     const [submit, setSubmit] = React.useState(false);
@@ -29,7 +29,7 @@ const Rsvp = () => {
 
     const [inputName, setInputName] = React.useState(initState.name);
     const [inputAdultCount, setAdultCount] = React.useState(initState.adultCount);
-    const [inoutChildrenCount, setChildrenCount] = React.useState(initState.childrenCount);
+    const [inputChildrenCount, setChildrenCount] = React.useState(initState.childrenCount);
 
     const [inputNameError, setInputNameError] = React.useState(initState.isError);
     const [inputAdultCountError, setInputAdultCountError] = React.useState(initState.isError);
@@ -61,7 +61,7 @@ const Rsvp = () => {
 
     const handleFormChildrenCountInput = (e) => {
         var isError = false;
-        if (e.target.value > 0 && e.target.value <= 10) {
+        if (e.target.value >= 0 && e.target.value <= 10) {
             setChildrenCount(e.target.value);
         } else {
             isError = true;
@@ -73,7 +73,6 @@ const Rsvp = () => {
 
     // Passing in vars instead of ref becuase of a out of state sync lag issue
     const toggleSubmit = (v1, v2, v3) => {
-        console.log(v1, v2, v3);
         v1 || v2 || v3 ? setSubmitDisabled(true) : setSubmitDisabled(false);
     };
 
@@ -87,10 +86,10 @@ const Rsvp = () => {
     };
 
     const handleFormSubmit = () => {
-        setRsvpData(arr => [...arr, inputName]);
         setOpen(false);
-        setSubmit(true);
         resetState();
+        setSubmit(true);
+        sendEmail();
 
         //timeout for submitted msg
         setTimeout(() => {
@@ -106,6 +105,21 @@ const Rsvp = () => {
         setInputNameError(initState.isError);
         setInputAdultCountError(initState.isError);
         setInputChildrenCountError(initState.isError);
+    };
+
+    const sendEmail = () => {
+        var content = {
+            name: inputName,
+            adults: inputAdultCount,
+            children: inputChildrenCount
+        }
+        // Get Email secrets from me
+        emailjs.send('', '', content, '')
+          .then((result) => {
+              console.log('RSVP OK');
+          }, (error) => {
+              console.log('RSVP Failed');
+          });
     };
 
     const RsvpButton = styled(Button)(() => ({
@@ -124,59 +138,61 @@ const Rsvp = () => {
     }));
 
     return (
-        <div>
-        <RsvpButton variant="contained" onClick={handleRsvpClickOpen}>RSVP</RsvpButton>
-        <Dialog open={open} onClose={handleFormClose}>
-            <DialogTitle>RSVP</DialogTitle>
-            <DialogContent>
-                <DialogContentText className='rsvp-info'>
-                    We are excited that you will be a part of our wedding!
-                    Please let us know how many guests will be joining us.
-                </DialogContentText>
-                <div>
-                <TextField onChange={(e) => handleFormNameInput(e)}
-                    margin="dense"
-                    label="First and Last Name"
-                    type="text"
-                    fullWidth
-                    variant="standard"
-                    required
-                    error={inputNameError}
-                />
-                </div>
-                <div>
-                <TextField onChange={(e) => handleFormAdultCountInput(e)}
-                    margin="dense"
-                    label="Adult Count"
-                    type="number"
-                    variant="standard"
-                    required
-                    error={inputAdultCountError}
-                />
-                </div>
-                <div>
-                <TextField onChange={(e) => handleFormChildrenCountInput(e)}
-                    margin="dense"
-                    label="Children Count"
-                    type="number"
-                    variant="standard"
-                    required
-                    error={inputChildrenCountError}
-                />
-                </div>
-            </DialogContent>
-            <DialogActions>
-                <Button onClick={handleFormClose}>Cancel</Button>
-                <Button onClick={handleFormSubmit} disabled={submitDisabled}>Submit</Button>
-            </DialogActions>
-        </Dialog>
-        <Dialog open={submit} onClose={handleFormClose}>
-        <Alert severity="success">
-            <AlertTitle>Thank You</AlertTitle>
-                We can't wait for you to join us.
-            </Alert>
-        </Dialog>
-        </div>
+        <form onSubmit={sendEmail}>
+            <div>
+            <RsvpButton variant="contained" onClick={handleRsvpClickOpen}>RSVP</RsvpButton>
+            <Dialog open={open} onClose={handleFormClose}>
+                <DialogTitle>RSVP</DialogTitle>
+                <DialogContent>
+                    <DialogContentText className='rsvp-info'>
+                        We are excited that you will be a part of our wedding!
+                        Please let us know how many guests will be joining us.
+                    </DialogContentText>
+                    <div>
+                    <TextField onChange={(e) => handleFormNameInput(e)}
+                        margin="dense"
+                        label="First and Last Name"
+                        type="text"
+                        fullWidth
+                        variant="standard"
+                        required
+                        error={inputNameError}
+                    />
+                    </div>
+                    <div>
+                    <TextField onChange={(e) => handleFormAdultCountInput(e)}
+                        margin="dense"
+                        label="Adult Count"
+                        type="number"
+                        variant="standard"
+                        required
+                        error={inputAdultCountError}
+                    />
+                    </div>
+                    <div>
+                    <TextField onChange={(e) => handleFormChildrenCountInput(e)}
+                        margin="dense"
+                        label="Children Count"
+                        type="number"
+                        variant="standard"
+                        required
+                        error={inputChildrenCountError}
+                    />
+                    </div>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleFormClose}>Cancel</Button>
+                    <Button onClick={handleFormSubmit} disabled={submitDisabled}>Submit</Button>
+                </DialogActions>
+            </Dialog>
+            <Dialog open={submit} onClose={handleFormClose}>
+            <Alert severity="success">
+                <AlertTitle>Thank You</AlertTitle>
+                    We can't wait for you to join us.
+                </Alert>
+            </Dialog>
+            </div>
+        </form>
     );
 }
 

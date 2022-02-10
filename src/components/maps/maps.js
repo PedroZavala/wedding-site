@@ -10,16 +10,19 @@ const wazeMapsUrl = 'https://waze.com/ul/h9v7gukpec';
 const wazeMapsLogo = 'https://is5-ssl.mzstatic.com/image/thumb/Purple126/v4/3b/d7/61/3bd76166-6403-0ffd-dbf8-dfbc4967485e/AppIcon-0-1x_U007emarketing-0-7-0-85-220.png/246x0w.webp';
 
 const Maps = () => {
+    const mapsInfoImgWidth = window.outerWidth <= 1100 ? '90%' : '40%';
+
     return (
-        <div className='maps-root'>
-            <p className='maps-title'>Directions</p>
-            <div className='maps-content'>
+        <div className='maps-root' id='directions'>
+            <p className='maps-title gold-underline'>Directions</p>
+            <div className='maps-icons-wrap'>
                 <div>
-                    {/* To replace href with proper vars when deploying final release */}
-                    <a href={"https://google.com"}><img className='maps-icon grow' src={appleMapsLogo}></img></a>
-                    <a href={"https://google.com"}><img className='maps-icon grow' src={googleMapsLogo}></img></a>
-                    <a href={"https://google.com"}><img className='maps-icon grow' src={wazeMapsLogo}></img></a>
+                    <a href={googleMapsUrl}><img className='maps-icon grow' src={googleMapsLogo}></img></a>
+                    <a href={appleMapsUrl}><img className='maps-icon grow' src={appleMapsLogo}></img></a>
                 </div>
+            </div>
+            <div>
+                <img className='maps-image-info' src='/images/maps-info.png' style={{width: mapsInfoImgWidth}}></img>
             </div>
         </div>
     );

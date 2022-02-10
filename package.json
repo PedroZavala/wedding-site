@@ -1,9 +1,10 @@
 {
   "name": "my-wedding-site",
-  "version": "2.06-beta",
+  "version": "2.09-beta",
   "homepage": "https://pedrozavala.github.io",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.4.0",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@mui/material": "^5.3.1",

@@ -8,7 +8,7 @@
 }
 
 .content-section-2 {
-  /* background-color: white; */
+  background-color: white;
 }
 
 .content-section-3   {
@@ -29,4 +29,17 @@ h1 {
 
 .grow:hover {
   transform: scale(1.1);
+}
+
+.gold-underline {
+  padding: 20px;
+  display : block;
+}
+
+.gold-underline:after {
+  content: '';
+  border-bottom: 2px solid rgb(210, 191, 55);
+  width: 50vmin;
+  display: block;
+  margin: 20px auto;
 }
