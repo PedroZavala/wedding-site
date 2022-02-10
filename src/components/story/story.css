@@ -13,15 +13,15 @@
 
 .story-text-title:after {
     content: '';
-    border-bottom: 2px solid rgb(231, 220, 114);
+    border-bottom: 2px solid rgb(210, 191, 55);
     width: 50vmin;
     display: block;
     margin: 20px auto;
 }
 
 .story-text-content {
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
     display: block;
     font-size: 4vmin;
     font-family: 'Dancing Script', cursive;

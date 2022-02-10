@@ -12,59 +12,100 @@ import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
 
 const Rsvp = () => {
+    const initState = {
+        name: '',
+        adultCount: 0,
+        childrenCount: 0,
+        submitDisabled: true,
+        isError: true
+    };
+
     const inputNameRegex = new RegExp('(.{2,} .{2,})');
+    const [rsvpData, setRsvpData] = React.useState([]);
 
     const [open, setOpen] = React.useState(false);
     const [submit, setSubmit] = React.useState(false);
-    const [submitDisabled, setSubmitDisabled] = React.useState(true);
-    const [inputNameError, setInputNameError] = React.useState(true);
-    const [inputAdultCountError, setInputAdultCountError] = React.useState(true);
-    const [inputChildrenCountError, setInputChildrenCountError] = React.useState(true);
+    const [submitDisabled, setSubmitDisabled] = React.useState(initState.submitDisabled);
+
+    const [inputName, setInputName] = React.useState(initState.name);
+    const [inputAdultCount, setAdultCount] = React.useState(initState.adultCount);
+    const [inoutChildrenCount, setChildrenCount] = React.useState(initState.childrenCount);
+
+    const [inputNameError, setInputNameError] = React.useState(initState.isError);
+    const [inputAdultCountError, setInputAdultCountError] = React.useState(initState.isError);
+    const [inputChildrenCountError, setInputChildrenCountError] = React.useState(initState.isError);
+
+    const handleFormNameInput = (e) => {
+        var isError = false;
+        if (inputNameRegex.test(e.target.value)) {
+            setInputName(e.target.value);
+        } else {
+            isError = true;
+        }
+
+        setInputNameError(isError);
+        toggleSubmit(isError, inputAdultCountError, inputChildrenCountError);
+    };
+
+    const handleFormAdultCountInput = (e) => {
+        var isError = false;
+        if (e.target.value > 0 && e.target.value <= 10) {
+            setAdultCount(e.target.value);
+        } else {
+            isError = true;
+        }
+
+        setInputAdultCountError(isError)
+        toggleSubmit(isError, inputNameError, inputChildrenCountError);
+    };
+
+    const handleFormChildrenCountInput = (e) => {
+        var isError = false;
+        if (e.target.value > 0 && e.target.value <= 10) {
+            setChildrenCount(e.target.value);
+        } else {
+            isError = true;
+        }
+
+        setInputChildrenCountError(isError)
+        toggleSubmit(isError, inputNameError, inputAdultCountError);
+    };
+
+    // Passing in vars instead of ref becuase of a out of state sync lag issue
+    const toggleSubmit = (v1, v2, v3) => {
+        console.log(v1, v2, v3);
+        v1 || v2 || v3 ? setSubmitDisabled(true) : setSubmitDisabled(false);
+    };
 
     const handleRsvpClickOpen = () => {
         setOpen(true);
     };
 
-    const handleFormNameInput = (e) => {
-        var result = false;
-        inputNameRegex.test(e.target.value) ? result = false : result = true;
-
-        setInputNameError(result);
-        toggleSubmit(result, inputAdultCountError, inputChildrenCountError);
-    };
-
-    const handleFormAdultCountInput = (e) => {
-        var result = false;
-        (e.target.value > 0 && e.target.value <= 10) ? result = false : result = true;
-
-        setInputAdultCountError(result)
-        toggleSubmit(result, inputNameError, inputChildrenCountError);
-    };
-
-    const handleFormChildrenCountInput = (e) => {
-        var result = false;
-        (e.target.value > 0 && e.target.value <= 10) ? result = false : result = true;
-
-        setInputChildrenCountError(result)
-        toggleSubmit(result, inputNameError, inputAdultCountError);
-    };
-
-    // Passing in vars instead of ref becuase of a out of state issue
-    const toggleSubmit = (v1, v2, v3) => {
-        v1 || v2 || v3 ? setSubmitDisabled(true) : setSubmitDisabled(false);
-    };
-
     const handleFormClose = () => {
         setOpen(false);
+        resetState();
     };
 
     const handleFormSubmit = () => {
+        setRsvpData(arr => [...arr, inputName]);
         setOpen(false);
         setSubmit(true);
+        resetState();
 
+        //timeout for submitted msg
         setTimeout(() => {
             setSubmit(false);
          }, 2500)
+    };
+
+    const resetState = () => {
+        setSubmitDisabled(true);
+        setInputName(initState.name);
+        setAdultCount(initState.adultCount);
+        setChildrenCount(initState.childrenCount);
+        setInputNameError(initState.isError);
+        setInputAdultCountError(initState.isError);
+        setInputChildrenCountError(initState.isError);
     };
 
     const RsvpButton = styled(Button)(() => ({
