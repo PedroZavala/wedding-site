@@ -2,6 +2,19 @@
     position: fixed;
 }
 
+.logo-intro-wrap {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    animation: logo-wrap-animation forwards 2s linear;
+}
+
+.logo-intro-img {
+    animation: logo-animation forwards 2s linear;
+}
+
 .background-img-content {
     position: fixed;
     height: 100%;
@@ -12,4 +25,45 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+@keyframes logo-wrap-animation {
+    0% {
+        background-color: rgb(0, 0, 0, 100%);
+    }
+    25% {
+        background-color: rgb(0, 0, 0, 98%);
+    }
+    50% {
+        background-color: rgb(0, 0, 0, 95%);
+    }
+    75% {
+        background-color: rgb(0, 0, 0, 70%);
+    }
+    100% {
+        background-color: rgb(0, 0, 0, 0%);
+    }
+}
+
+@keyframes logo-animation {
+    0% {
+        transform: scale(.25, .25);
+        opacity: 100%;
+    }
+    25% {
+        transform: scale(.35, .35);
+        opacity: 95%;
+    }
+    50% {
+        transform: scale(.45, .45);
+        opacity: 90%;
+    }
+    75% {
+        transform: scale(1, 1);
+        opacity: 45%;
+    }
+    100% {
+        transform: scale(1.5, 1.5);
+        opacity: 0%;
+    }
 }
