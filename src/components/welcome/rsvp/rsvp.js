@@ -86,15 +86,16 @@ const Rsvp = () => {
     };
 
     const handleFormSubmit = () => {
+        //timeout for submitted msg
+        setTimeout(() => {
+            setSubmit(false);
+         }, 2500)
+
         setOpen(false);
         resetState();
         setSubmit(true);
         sendEmail();
 
-        //timeout for submitted msg
-        setTimeout(() => {
-            setSubmit(false);
-         }, 2500)
     };
 
     const resetState = () => {
