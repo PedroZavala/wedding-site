@@ -23,6 +23,11 @@ export const scrollHook_getYPosition = () => {
     return scrollYPosition();
 }
 
+export const scrollHook_getYPerBreakPerc = (scrollYBreak) => {
+    var relativeYAtBreak = (scrollYPosition() / scrollYBreak);
+    return (relativeYAtBreak < 1 ? relativeYAtBreak : 1) * 100;
+}
+
 export const scrollHook_getDynamicMarginYPosition = (scrollYBreak, maxMarginOffset) => {
     var relativeYAtBreak = (scrollYPosition() / scrollYBreak);
     return maxMarginOffset - (maxMarginOffset * (relativeYAtBreak < 1 ? relativeYAtBreak : 1));
