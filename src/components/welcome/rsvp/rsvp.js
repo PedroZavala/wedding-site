@@ -61,7 +61,7 @@ const Rsvp = () => {
 
     const handleFormChildrenCountInput = (e) => {
         var isError = false;
-        if (e.target.value > 0 && e.target.value <= 10) {
+        if (e.target.value >= 0 && e.target.value <= 10) {
             setChildrenCount(e.target.value);
         } else {
             isError = true;
