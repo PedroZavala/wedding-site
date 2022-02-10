@@ -138,8 +138,7 @@ const Rsvp = () => {
     }));
 
     return (
-        <form onSubmit={sendEmail}>
-            <div>
+        <div>
             <RsvpButton variant="contained" onClick={handleRsvpClickOpen}>RSVP</RsvpButton>
             <Dialog open={open} onClose={handleFormClose}>
                 <DialogTitle>RSVP</DialogTitle>
@@ -191,8 +190,7 @@ const Rsvp = () => {
                     We can't wait for you to join us.
                 </Alert>
             </Dialog>
-            </div>
-        </form>
+        </div>
     );
 }
 
