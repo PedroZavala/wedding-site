@@ -5,7 +5,6 @@ const scrollYPosition = () => {
 
     const handleScroll = () => {
         const position = window.pageYOffset;
-        console.log(position);
         setScrollYPosition(position);
     };
 
@@ -26,6 +25,17 @@ export const scrollHook_getYPosition = () => {
 export const scrollHook_getYPerBreakPerc = (scrollYBreak) => {
     var relativeYAtBreak = (scrollYPosition() / scrollYBreak);
     return (relativeYAtBreak < 1 ? relativeYAtBreak : 1) * 100;
+}
+
+export const scrollHook_getYPerBreakPercFromStart = (scrollYStart, scrollYBreak) => {
+    var relativeYAtBreak = ((scrollYPosition() -  scrollYStart)/ scrollYBreak);
+    if (relativeYAtBreak < 0) {
+        return 0;
+    } else if (relativeYAtBreak < 1) {
+        return relativeYAtBreak * 100;
+    } else {
+        return 100;
+    }
 }
 
 export const scrollHook_getDynamicMarginYPosition = (scrollYBreak, maxMarginOffset) => {

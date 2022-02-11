@@ -1,32 +1,90 @@
 import './story.css'
-import { scrollHook_getDynamicMarginYPosition, scrollHook_getYPerBreakPerc } from '../util/scrollHooks';
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import {
+    scrollHook_getDynamicMarginYPosition,
+    scrollHook_getYPerBreakPerc,
+    scrollHook_getYPerBreakPercFromStart } from '../util/scrollHooks';
+
+const CardLink = (props) => {
+    if (props.placement == 'right' && props.isBefore) {
+        return <div className='story-line-link'><h4></h4></div>
+    } else if (props.placement == 'left' && !props.isBefore) {
+        return <div className='story-line-link'><h4></h4></div>
+    } else {
+        return <div/>
+    }
+}
+
+const StoryCard = (props) => {
+    const scrollYBreak = 700;
+    const cardRowAdjustedBreak = 475;
+    const travelFactor = 3.5;
+
+    const cardSlideInStyle = () => {
+        var yBreak = scrollHook_getYPerBreakPerc(scrollYBreak);
+        var yBreakAdj = props.row == 1 ? yBreak : scrollHook_getYPerBreakPercFromStart(cardRowAdjustedBreak, scrollYBreak);
+        var percent = ((yBreakAdj - 100) * -1) * travelFactor;
+
+        if (props.placement == 'right') {
+            return {left: `${percent}px`, justifyContent: 'flex-start' }
+        } else {
+            return {right: `${percent}px`, justifyContent: 'flex-end' }
+        }
+    }
+
+    return (
+        <div className='story-card-content' style={cardSlideInStyle()}>
+            <CardLink isBefore={true} placement={props.placement}/>
+            <Card sx={{ maxWidth: 350 }}>
+                <CardMedia
+                    component="img"
+                    height="140"
+                    image="images/grid/ring.jpg"
+                    alt="green iguana"
+                />
+                <CardContent>
+                    <Typography gutterBottom variant="h7" component="div">
+                    01.14.21
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                    2010 - Lizards are a widespread group of squamate reptiles, with over 6,000
+                    species, ranging across all continents except Antarctica
+                    </Typography>
+                </CardContent>
+            </Card>
+            <CardLink isBefore={false} placement={props.placement}/>
+        </div>
+    );
+}
+
+const StoryCardRow = (props) => {
+    return (
+        <div className='story-line-row'>
+            <div className='story-line-left'>
+                <StoryCard placement='left' row={props.row}/>
+                <div className='story-line-empty-card'/>
+            </div>
+            <div className='story-line-right'>
+                <div className='story-line-empty-card'/>
+                <StoryCard placement='right' row={props.row}/>
+            </div>
+        </div>
+    );
+}
 
 const Story = () => {
-    const scrollYBreak = 600;
-    const titleHiddenTopMargin = 300;
-
-    const titleStyle = {
-        left: `${scrollHook_getDynamicMarginYPosition(scrollYBreak, titleHiddenTopMargin)}px`,
-        opacity: `${scrollHook_getYPerBreakPerc(scrollYBreak)}%`
-    };
-
     return (
         <div className='story-root' id='our-story'>
             <div className='story-text-title-div gold-underline'>
-                <p className='story-text-title' style={titleStyle}>Our Story</p>
+                <p className='story-text-title'>Our Story</p>
             </div>
-            <div className='story-text-content'>
-                <p>Once upon a time, there was a little girl who lived in a village near the forest.  Whenever she went out, the little girl wore a red riding cloak, so everyone in the village called her Little Red Riding Hood.
-                    One morning, Little Red Riding Hood asked her mother if she could go to visit her grandmother as it had been awhile since they'd seen each other.
-                    "That's a good idea," her mother said.  So they packed a nice basket for Little Red Riding Hood to take to her grandmother.
-                    When the basket was ready, the little girl put on her red cloak and kissed her mother goodbye.
-                    "Remember, go straight to Grandma's house," her mother cautioned. "Don't dawdle along the way and please don't talk to strangers!  The woods are dangerous."
-                    "Don't worry, mommy," said Little Red Riding Hood, "I'll be careful." But when Little Red Riding Hood noticed some lovely flowers in the woods, she forgot her promise to her mother.
-                    She picked a few, watched the butterflies flit about for awhile, listened to the frogs croaking and then picked a few more.
-                    Little Red Riding Hood was enjoying the warm summer day so much, that she didn't notice a dark shadow approaching out of the forest behind her...
-                    Suddenly, the wolf appeared beside her. "What are you doing out here, little girl?" the wolf asked in a voice as friendly as he could muster.
-                    "I'm on my way to see my Grandma who lives through the forest, near the brook,"  Little Red Riding Hood replied.
-                    Then she realized how late she was and quickly excused herself, rushing down the path to her Grandma's house. </p>
+            <div className="story-line-root">
+                <StoryCardRow row='1'/>
+                <StoryCardRow row='2'/>
             </div>
         </div>
     );
