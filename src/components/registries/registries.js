@@ -19,7 +19,7 @@ const Registries = () => {
     return (
         <div className='registries-root' id='registry'>
             <div className='registries-title-div gold-underline'>
-                <p className='registries-title' style={titleStyle}>Gift Registry</p>
+                <p className='registries-title'>Gift Registry</p>
             </div>
             <div className='registries-center'>
                 <div>
