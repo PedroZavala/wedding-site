@@ -22,7 +22,7 @@ const CardLink = (props) => {
 const StoryCard = (props) => {
     const scrollYBreak = 700;
     const cardRowAdjustedBreak = 475;
-    const travelFactor = 3.5;
+    const travelFactor = 2.5;
 
     const cardSlideInStyle = () => {
         var yBreak = scrollHook_getYPerBreakPerc(scrollYBreak);
