@@ -10,9 +10,9 @@
     padding: 20px;
     font-size: 7vmin;
     font-family: 'Playfair Display SC', serif;
+    margin-left: 40vw;
 }
 
-.timeline-img {
-    height: auto;
-    padding-bottom: 50px;
+.timeline-content {
+    height: 500px;
 }

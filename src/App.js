@@ -15,10 +15,10 @@ const picGrid1 = [
   'market-square.jpg',
   'mustache.jpg',
   'p-bday.jpg',
-  'ring-eng.jpg',
-  'sa-river.jpg',
-  'uh-fnt.png',
-  'valentines.jpg',
+  'ring-eng.jpg'
+  // 'sa-river.jpg',
+  // 'uh-fnt.png',
+  // 'valentines.jpg',
 ];
 
 const App = () => {

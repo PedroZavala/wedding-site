@@ -17,14 +17,6 @@
     position: relative;
 }
 
-.story-text-content {
-    margin-left: 10%;
-    margin-right: 10%;
-    display: block;
-    font-size: 4vmin;
-    font-family: 'Dancing Script', cursive;
-}
-
 .story-line-root {
     width: 100%;
 }
@@ -41,13 +33,13 @@
     border-right: solid;
     overflow: hidden;
     width: 100%;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 .story-line-right {
     overflow: hidden;
     width: 100%;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .story-card-content {
@@ -57,12 +49,12 @@
 }
 
 .story-line-empty-card {
-    height: 30vh;
+    width: 100%;
 }
 
 .story-line-link {
     height: auto;
-    width: 10vmin;
+    width: 8vmin;
 }
 
 h4 {

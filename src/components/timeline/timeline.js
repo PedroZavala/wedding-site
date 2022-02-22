@@ -6,7 +6,9 @@ const Timeline = () => {
     return (
         <div className='timeline-root' id='timeline'>
             <p className='timeline-title gold-underline'>Timeline</p>
-            <img className='timeline-img' src='/images/agenda.png' style={{width: imgWidth}}></img>
+            <div className='timeline-content'>
+                <p>hi</p>
+            </div>
         </div>
     );
 }
