@@ -86,15 +86,16 @@ const Rsvp = () => {
     };
 
     const handleFormSubmit = () => {
+        //timeout for submitted msg
+        setTimeout(() => {
+            setSubmit(false);
+         }, 2500)
+
         setOpen(false);
         resetState();
         setSubmit(true);
         sendEmail();
 
-        //timeout for submitted msg
-        setTimeout(() => {
-            setSubmit(false);
-         }, 2500)
     };
 
     const resetState = () => {
@@ -138,8 +139,7 @@ const Rsvp = () => {
     }));
 
     return (
-        <form onSubmit={sendEmail}>
-            <div>
+        <div>
             <RsvpButton variant="contained" onClick={handleRsvpClickOpen}>RSVP</RsvpButton>
             <Dialog open={open} onClose={handleFormClose}>
                 <DialogTitle>RSVP</DialogTitle>
@@ -191,8 +191,7 @@ const Rsvp = () => {
                     We can't wait for you to join us.
                 </Alert>
             </Dialog>
-            </div>
-        </form>
+        </div>
     );
 }
 

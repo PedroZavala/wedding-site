@@ -1,6 +1,6 @@
 .ticker-root {
     width: 100%;
-    height: 100%;    
+    height: 100%;
 }
 
 .ticker-content {
@@ -19,13 +19,13 @@
 }
 
 .ticker-text-done {
-    font-size: 12vmin;     
+    font-size: 12vmin;
 }
 
 .ticker-text-ticking-header {
-    font-size: 4vmin;       
+    font-size: 4vmin;
 }
 
 .ticker-text-ticking-num {
-    font-size: 10vmin;       
+    font-size: 10vmin;
 }

@@ -2,13 +2,19 @@
     height: auto;
     margin-bottom: 50px;
     text-align: center;
+    width: 100%;
+}
+
+.story-text-title-div {
+    padding: 20px;
+    display : block;
+    overflow: hidden;
 }
 
 .story-text-title {
-    padding: 20px;
     font-size: 7vmin;
     font-family: 'Playfair Display SC', serif;
-    display : block;
+    position: relative;
 }
 
 .story-text-content {
@@ -17,4 +23,59 @@
     display: block;
     font-size: 4vmin;
     font-family: 'Dancing Script', cursive;
+}
+
+.story-line-root {
+    width: 100%;
+}
+
+.story-line-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.story-line-left {
+    border-color: black;
+    border-right: solid;
+    overflow: hidden;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.story-line-right {
+    overflow: hidden;
+    width: 100%;
+    margin-right: 10px;
+}
+
+.story-card-content {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+}
+
+.story-line-empty-card {
+    height: 30vh;
+}
+
+.story-line-link {
+    height: auto;
+    width: 10vmin;
+}
+
+h4 {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 40%
+}
+
+h4:before,
+h4:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 3px solid #000;
+    margin: auto;
 }

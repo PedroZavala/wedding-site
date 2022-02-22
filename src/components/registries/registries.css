@@ -1,12 +1,19 @@
 .registries-root {
     text-align: center;
-    font-family: 'Playfair Display SC', serif;
-    font-size: 6vmin;
     margin-bottom: 30px;
+}
+
+.registries-title-div {
+    padding: 3vmin;
+    display : block;
+    overflow: hidden;
 }
 
 .registries-title {
     padding: 3vmin;
+    font-family: 'Playfair Display SC', serif;
+    font-size: 6vmin;
+    position: relative;
 }
 
 .registries-center {
