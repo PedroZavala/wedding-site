@@ -131,7 +131,6 @@ const Rsvp = () => {
         width: 'calc(80px + 5vmin)',
         transform: 'translateX(-50%)',
         fontFamily: '\'Playfair Display SC\', serif',
-        boxShadow: '1px 1px 8px rgb(180, 180, 180)',
         backgroundColor: '#000000',
         '&:hover': {
             backgroundColor: 'rgb(50, 50, 50)',
