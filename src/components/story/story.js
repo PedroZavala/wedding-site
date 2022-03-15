@@ -24,7 +24,7 @@ const StoryCard = (props) => {
 
     const cardDynamicAnimation = () => {
         const scrollYBreak = isMobile ? 600 : 500
-        const cardRowAdjustedBreak = isMobile ? 400 : 700;
+        const cardRowAdjustedBreak = isMobile ? 400 : 600;
         const rowYBreak = scrollYBreak + ((props.row - 1) * cardRowAdjustedBreak)
         var playState = scrollHook_getYPosition() < rowYBreak ?  'paused' : 'running';
 
@@ -77,7 +77,6 @@ const StoryCardRow = (props) => {
                     date={props.dateL}
                     desc={props.descL}
                 />
-                {/* <div className='story-line-empty-card' style={isMobile ? {height: '0vh'} : {height: '0vh'}}/> */}
             </div>
             <div className='story-line-right'>
                 <div className='story-line-empty-card' style={isMobile ? {height: '20vh'} : {height: '45vh'}}/>
