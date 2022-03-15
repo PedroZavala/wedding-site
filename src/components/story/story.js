@@ -6,6 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import {
     scrollHook_getYPerBreakPerc,
+    scrollHook_getYPosition,
     scrollHook_getYPerBreakPercFromStart } from '../util/scrollHooks';
 
 const CardLink = (props) => {
@@ -20,24 +21,28 @@ const CardLink = (props) => {
 
 const StoryCard = (props) => {
     const isMobile = window.outerWidth <= 750 ? true : false;
-    const scrollYBreak = isMobile ? 600 : 900
-    const cardRowAdjustedBreak = isMobile ? 400 : 1000;
-    const travelFactor = 2.5;
 
-    const cardSlideInStyle = () => {
-        var yBreak = scrollHook_getYPerBreakPerc(scrollYBreak);
-        var yBreakAdj = props.row == 1 ? yBreak : scrollHook_getYPerBreakPercFromStart(cardRowAdjustedBreak, scrollYBreak);
-        var percent = ((yBreakAdj - 100) * -1) * travelFactor;
+    const cardDynamicAnimation = () => {
+        const scrollYBreak = isMobile ? 600 : 500
+        const cardRowAdjustedBreak = isMobile ? 400 : 700;
+        const rowYBreak = scrollYBreak + ((props.row - 1) * cardRowAdjustedBreak)
+        var playState = scrollHook_getYPosition() < rowYBreak ?  'paused' : 'running';
 
         if (props.placement == 'right') {
-            return {left: `${percent}px`, justifyContent: 'flex-start' }
+            return {
+                animationPlayState: playState,
+                justifyContent: 'flex-start'
+            }
         } else {
-            return {right: `${percent}px`, justifyContent: 'flex-end' }
+            return {
+                animationPlayState: playState,
+                justifyContent: 'flex-end'
+            }
         }
     }
 
     return (
-        <div className='story-card-content' style={cardSlideInStyle()}>
+        <div className={`story-card-content story-card-${props.placement}-animate`} style={cardDynamicAnimation()}>
             <CardLink isBefore={true} placement={props.placement}/>
             <Card sx={isMobile ? { maxWidth: '100vw' } : { maxWidth: '30vw' }}>
                 <CardMedia
