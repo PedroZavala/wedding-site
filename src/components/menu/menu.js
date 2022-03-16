@@ -16,6 +16,14 @@ import ListItem from '@mui/material/ListItem';
 
 const drawerWidth = 200;
 
+const menuItems = [
+  {text: 'Our Story', id:'/#our-story'},
+  {text: 'Registry', id:'/#registry'},
+  {text: 'Timeline', id:'/#timeline'},
+  {text: 'Directions', id:'/#directions'},
+  {text: 'RSVP', id:'/#welcome'}
+];
+
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
 })(({ theme, open }) => ({
@@ -96,10 +104,7 @@ const Menu = () => {
         </DrawerHeader>
         <Divider />
         <List>
-          {[{text: 'Our Story', id:'/#our-story'},
-            {text: 'Registry', id:'/#registry'},
-            {text: 'Timeline', id:'/#timeline'},
-            {text: 'Directions', id:'/#directions'},].map((item) => (
+          {menuItems.map((item) => (
             <ListItem button key={item.id}>
               <a href={item.id} className="menu-item-text" onClick={handleDrawerClose}>{item.text}</a>
             </ListItem>
