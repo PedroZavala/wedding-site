@@ -5,7 +5,7 @@ import Registries from './components/registries/registries';
 import PicGrid from './components/picgrid/picgrid';
 import Maps from './components/maps/maps'
 import Timeline from './components/timeline/timeline';
-import PersistentDrawerLeft from './components/drawer/persistentDrawerLeft'
+import Menu from './components/menu/menu'
 
 const picGrid1 = [
   '360-bridge.jpg',
@@ -26,7 +26,7 @@ const App = () => {
   return (
     <>
       <div className='main-root'>
-        <PersistentDrawerLeft/>
+        <Menu/>
         <Welcome/>
         <div className='content-section-1'>
           <Story/>

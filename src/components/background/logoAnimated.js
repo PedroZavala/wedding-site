@@ -5,11 +5,11 @@ const LogoAnimated = () => {
     const [logoFadeOut, setLogoFadeOut] = useState(1);
 
     setTimeout(() => {
-      setLogoFadeOut(-2);
+      setLogoFadeOut(-100);
     }, 2500)
 
     return (
-        <div style={{zIndex: '-2'}}>
+        <div>
             <div className='background-img-wrap logo-intro-wrap' style={{zIndex: logoFadeOut}}>
                 <img className='logo-intro-img' src='/logo.png'></img>
             </div>

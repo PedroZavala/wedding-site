@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './menu.css';
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -6,17 +7,14 @@ import CssBaseline from '@mui/material/CssBaseline';
 import MuiAppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItem from '@mui/material/ListItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import { scrollHook_getYPosition } from '../util/scrollHooks';
 
 const drawerWidth = 240;
 
@@ -65,7 +63,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   justifyContent: 'flex-end',
 }));
 
-export default function PersistentDrawerLeft() {
+const Menu = () => {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
@@ -77,13 +75,30 @@ export default function PersistentDrawerLeft() {
     setOpen(false);
   };
 
+  var headerFadeStyle = (animPrefix) => {
+    if (scrollHook_getYPosition() > 20) {
+      return {
+        animationName: `${animPrefix}-to-color`,
+        animationDuration: '.5s',
+        animationFillMode: 'forwards',
+        animationTimingFunction: 'linear',
+        boxShadow: 'none'
+      };
+    } else {
+      return {
+        animationName: `${animPrefix}-to-transparent`,
+        animationDuration: '.5s',
+        animationFillMode: 'forwards',
+        animationTimingFunction: 'linear',
+        boxShadow: 'none'
+      };
+    }
+  };
+
   return (
-    <Box sx={{ display: 'flex', position: 'fixed'}}>
+    <Box sx={{ display: 'flex', position: 'fixed', zIndex: '2'}}>
       <CssBaseline />
-      <AppBar position="fixed" open={open} style={{
-          backgroundColor: 'transparent',
-          boxShadow: 'none'
-        }}>
+      <AppBar position="fixed" open={open} style={headerFadeStyle('header')}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -92,11 +107,11 @@ export default function PersistentDrawerLeft() {
             edge="start"
             sx={{ mr: 2, ...(open && { display: 'none' }) }}
           >
-            <MenuIcon />
+          <MenuIcon />
           </IconButton>
-          {/* <Typography variant="h6" noWrap component="div">
-            Persistent drawer
-          </Typography> */}
+          <div className="menu-title-div" style={headerFadeStyle('header-text')}>
+            <h2 className="menu-title-text">Ashley and Pedro</h2>
+          </div>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -119,19 +134,15 @@ export default function PersistentDrawerLeft() {
         </DrawerHeader>
         <Divider />
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          {['Our Story', 'Registry', 'Timeline', 'Directions'].map((text, index) => (
             <ListItem button key={text}>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText primary={text}/>
             </ListItem>
           ))}
         </List>
       </Drawer>
-      <Main open={open}>
-        {/* <DrawerHeader /> */}
-      </Main>
     </Box>
   );
 }
+
+export default Menu;
