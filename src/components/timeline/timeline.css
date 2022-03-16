@@ -15,3 +15,21 @@
 .timeline-content {
     height: 500px;
 }
+
+table {
+    width: 50vw;
+    font-size: 3ch;
+    font-family: 'Playfair Display SC', serif;
+}
+
+.table-time-cell {
+    width: 50%;
+    text-align: center;
+    padding: 1ch;
+}
+
+.table-descr-cell {
+    width: 50%;
+    text-align: left;
+    padding: 1ch;
+}
