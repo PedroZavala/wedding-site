@@ -7,7 +7,7 @@ const BackgroundShift = () => {
 
   const contentEnable = {
     zIndex: `0`,
-    opacity: '100'
+    opacity: '1'
   };
 
   const contentDisable = {

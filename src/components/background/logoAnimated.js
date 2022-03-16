@@ -2,10 +2,10 @@ import React, {useState} from 'react'
 import './backgroundShift.css'
 
 const LogoAnimated = () => {
-    const [logoFadeOut, setLogoFadeOut] = useState(1);
+    const [logoFadeOut, setLogoFadeOut] = useState(10);
 
     setTimeout(() => {
-      setLogoFadeOut(-100);
+      setLogoFadeOut(-10);
     }, 2500)
 
     return (

@@ -14,7 +14,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItem from '@mui/material/ListItem';
 
-const drawerWidth = 180;
+const drawerWidth = 200;
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
@@ -99,9 +99,9 @@ const Menu = () => {
           {[{text: 'Our Story', id:'/#our-story'},
             {text: 'Registry', id:'/#registry'},
             {text: 'Timeline', id:'/#timeline'},
-            {text: 'Venue', id:'/#directions'},].map((item) => (
+            {text: 'Directions', id:'/#directions'},].map((item) => (
             <ListItem button key={item.id}>
-              <a href={item.id} className="menu-item-text">{item.text}</a>
+              <a href={item.id} className="menu-item-text" onClick={handleDrawerClose}>{item.text}</a>
             </ListItem>
           ))}
         </List>

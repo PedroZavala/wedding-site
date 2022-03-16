@@ -32,7 +32,6 @@
 @keyframes logo-wrap-animation {
     0% {
         background-color: rgb(0, 0, 0, 100%);
-        z-index: 100;
     }
     25% {
         background-color: rgb(0, 0, 0, 98%);
