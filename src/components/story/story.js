@@ -42,7 +42,7 @@ const StoryCard = (props) => {
     }
 
     return (
-        <div className={`story-card-content story-card-${props.placement}-animate`} style={cardDynamicAnimation()}>
+        <div id='our-story' className={`story-card-content story-card-${props.placement}-animate`} style={cardDynamicAnimation()}>
             <CardLink isBefore={true} placement={props.placement}/>
             <Card sx={isMobile ? { maxWidth: '100vw' } : { maxWidth: '30vw' }}>
                 <CardMedia

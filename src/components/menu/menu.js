@@ -13,29 +13,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import { scrollHook_getYPosition } from '../util/scrollHooks';
 
-const drawerWidth = 240;
-
-const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
-  ({ theme, open }) => ({
-    flexGrow: 1,
-    padding: theme.spacing(3),
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-    marginLeft: `-${drawerWidth}px`,
-    ...(open && {
-      transition: theme.transitions.create('margin', {
-        easing: theme.transitions.easing.easeOut,
-        duration: theme.transitions.duration.enteringScreen,
-      }),
-      marginLeft: 0,
-    }),
-  }),
-);
+const drawerWidth = 180;
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
@@ -75,43 +54,26 @@ const Menu = () => {
     setOpen(false);
   };
 
-  var headerFadeStyle = (animPrefix) => {
-    if (scrollHook_getYPosition() > 20) {
-      return {
-        animationName: `${animPrefix}-to-color`,
-        animationDuration: '.5s',
-        animationFillMode: 'forwards',
-        animationTimingFunction: 'linear',
-        boxShadow: 'none'
-      };
-    } else {
-      return {
-        animationName: `${animPrefix}-to-transparent`,
-        animationDuration: '.5s',
-        animationFillMode: 'forwards',
-        animationTimingFunction: 'linear',
-        boxShadow: 'none'
-      };
-    }
-  };
-
   return (
     <Box sx={{ display: 'flex', position: 'fixed', zIndex: '2'}}>
       <CssBaseline />
-      <AppBar position="fixed" open={open} style={headerFadeStyle('header')}>
+      <AppBar position="fixed" open={open} style={{
+        backgroundColor: 'transparent',
+        boxShadow: 'none'}}
+      >
         <Toolbar>
           <IconButton
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
-            sx={{ mr: 2, ...(open && { display: 'none' }) }}
+            sx={{
+              backgroundColor: 'black',
+              opacity: '.4',
+              mr: 2, ...(open && { display: 'none' }) }}
           >
           <MenuIcon />
           </IconButton>
-          <div className="menu-title-div" style={headerFadeStyle('header-text')}>
-            <h2 className="menu-title-text">Ashley and Pedro</h2>
-          </div>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -134,9 +96,12 @@ const Menu = () => {
         </DrawerHeader>
         <Divider />
         <List>
-          {['Our Story', 'Registry', 'Timeline', 'Directions'].map((text, index) => (
-            <ListItem button key={text}>
-              <ListItemText primary={text}/>
+          {[{text: 'Our Story', id:'/#our-story'},
+            {text: 'Registry', id:'/#registry'},
+            {text: 'Timeline', id:'/#timeline'},
+            {text: 'Venue', id:'/#directions'},].map((item) => (
+            <ListItem button key={item.id}>
+              <a href={item.id} className="menu-item-text">{item.text}</a>
             </ListItem>
           ))}
         </List>

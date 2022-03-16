@@ -1,37 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Playfair+Display+SC&display=swap');
 
-.menu-title-div {
-    width: 100%;
-    height: auto;
-    text-align: center;
+a {
+    text-decoration: none;
+    color: black;
 }
 
-.menu-title-text {
-    font-size: 4.25vmin;
-    font-family: 'Parisienne', cursive;
-    margin: 0px;
+a:visited {
+    text-decoration: none;
+    color: black;
 }
 
 .menu-item-text {
-    font-family: 'Parisienne', cursive;
-}
-
-@keyframes header-to-color {
-    from { background-color: transparent; }
-    to { background-color: black; }
-}
-
-@keyframes header-to-transparent {
-    from { background-color: black; }
-    to { background-color: transparent; }
-}
-
-@keyframes header-text-to-color {
-    from { color: transparent; }
-    to { color: white; }
-}
-
-@keyframes header-text-to-transparent {
-    from { color: white; }
-    to { color: transparent; }
+    font-family: 'Playfair Display SC', serif;
+    font-size: 1.3em;
 }
