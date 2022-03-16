@@ -23,8 +23,8 @@ const StoryCard = (props) => {
     const isMobile = window.outerWidth <= 750 ? true : false;
 
     const cardDynamicAnimation = () => {
-        const scrollYBreak = isMobile ? 600 : 500
-        const cardRowAdjustedBreak = isMobile ? 400 : 600;
+        const scrollYBreak = isMobile ? 400 : 500
+        const cardRowAdjustedBreak = isMobile ? 400 : 1100;
         const rowYBreak = scrollYBreak + ((props.row - 1) * cardRowAdjustedBreak)
         var playState = scrollHook_getYPosition() < rowYBreak ?  'paused' : 'running';
 
@@ -108,6 +108,20 @@ const Story = () => {
                 />
                 <StoryCardRow
                     row='2'
+                    imageL='\images\grid\atx-luvu.jpg' dateL='7.3.18'
+                    descL='This is at atx'
+                    imageR='\images\grid\ring.jpg' dateR='2.14.21'
+                    descR='This is the ring'
+                />
+                <StoryCardRow
+                    row='3'
+                    imageL='\images\grid\360-bridge.jpg' dateL='3.10.19'
+                    descL='This is at 360 bridge'
+                    imageR='\images\grid\8-anniv.jpg' dateR='2.14.21'
+                    descR='This is our 8th anniv'
+                />
+                <StoryCardRow
+                    row='4'
                     imageL='\images\grid\atx-luvu.jpg' dateL='7.3.18'
                     descL='This is at atx'
                     imageR='\images\grid\ring.jpg' dateR='2.14.21'

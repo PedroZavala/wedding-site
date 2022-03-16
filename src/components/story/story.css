@@ -6,7 +6,7 @@
 }
 
 .story-text-title-div {
-    padding: 20px;
+    padding: 2%;
     display : block;
     overflow: hidden;
 }
@@ -50,14 +50,14 @@
 
 .story-card-left-animate {
     animation-name: left-card-ease-in;
-    animation-duration: 1s;
+    animation-duration: .5s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
 }
 
 .story-card-right-animate {
     animation-name: right-card-ease-in;
-    animation-duration: 1s;
+    animation-duration: .5s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
 }
@@ -68,7 +68,7 @@
 
 .story-line-link {
     height: auto;
-    width: 8vmin;
+    width: 8em;
 }
 
 h4 {

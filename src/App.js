@@ -41,7 +41,7 @@ const App = () => {
           <Maps/>
           <PicGrid pictures={picGrid2}/>
         </div>
-                {/* See backgroundShift component for parallel scrolling
+        {/* See backgroundShift component for parallel scrolling
         effects when disabling background color in div box */}
         <div className='content-section-2'>
           <Timeline/>
