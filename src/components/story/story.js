@@ -103,7 +103,7 @@ const Story = () => {
                     row='1'
                     imageL='\images\grid\360-bridge.jpg' dateL='3.10.19'
                     descL='This is at 360 bridge'
-                    imageR='\images\grid\8-anniv.jpg' dateR='2.14.21'
+                    imageR='\images\grid\atx-luvu.jpg' dateR='2.14.21'
                     descR='This is our 8th anniv'
                 />
                 <StoryCardRow

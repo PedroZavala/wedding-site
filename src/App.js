@@ -37,14 +37,14 @@ const App = () => {
           <Registries/>
           <PicGrid pictures={picGrid1}/>
         </div>
-        <div className='content-section-3'>
-          <Maps/>
-          <PicGrid pictures={picGrid2}/>
-        </div>
         {/* See backgroundShift component for parallel scrolling
         effects when disabling background color in div box */}
         <div className='content-section-2'>
           <Timeline/>
+        </div>
+        <div className='content-section-3'>
+          <PicGrid pictures={picGrid2}/>
+          <Maps/>
         </div>
         <Footer/>
       </div>
