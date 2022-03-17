@@ -6,6 +6,8 @@
 .picgrid-content {
     align-content: center;
     position: relative;
+    padding-bottom: 15px;
+    padding-top: 1px;
 }
 
 ul {

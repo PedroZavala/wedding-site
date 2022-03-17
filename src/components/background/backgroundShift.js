@@ -7,7 +7,7 @@ const BackgroundShift = () => {
 
   const contentEnable = {
     zIndex: `0`,
-    opacity: '100'
+    opacity: '1'
   };
 
   const contentDisable = {
@@ -24,7 +24,7 @@ const BackgroundShift = () => {
       </div>
       <div className='background-img-content'
         style={scrollHook_getYPosition() < scrollYBreak ? contentDisable : contentEnable}>
-        <img className='background-img' src='/images/wood.jpg'></img>
+        <img className='background-img' src='/images/eu-cov.png'></img>
       </div>
     </div>
   );

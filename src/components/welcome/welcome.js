@@ -6,7 +6,7 @@ import LogoAnimated from '../background/logoAnimated';
 
 const Welcome = () => {
     return (
-        <div className='welcome-root'>
+        <div className='welcome-root' id='welcome'>
           <BackgroundShift/>
           <LogoAnimated/>
           <div className='welcome-text-box'>

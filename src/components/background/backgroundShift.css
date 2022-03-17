@@ -2,6 +2,7 @@
     position: fixed;
 }
 
+/* Adds a fading dark tint to page since logo does not have background */
 .logo-intro-wrap {
     height: 100vh;
     width: 100vw;
@@ -11,6 +12,7 @@
     animation: logo-wrap-animation forwards 2s linear;
 }
 
+/* Grows logo and fades out */
 .logo-intro-img {
     animation: logo-animation forwards 2s linear;
 }

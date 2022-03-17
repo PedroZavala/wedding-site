@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Playfair+Display+SC&display=swap');
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-item-text {
+    font-family: 'Playfair Display SC', serif;
+    font-size: 1.3em;
+}

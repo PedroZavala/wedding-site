@@ -6,13 +6,30 @@
 }
 
 .timeline-title {
-    color: white;
+    color: black;
     padding: 20px;
     font-size: 7vmin;
     font-family: 'Playfair Display SC', serif;
 }
 
-.timeline-img {
+.timeline-content {
     height: auto;
-    padding-bottom: 50px;
+}
+
+table {
+    width: 50vw;
+    font-size: 3ch;
+    font-family: 'Playfair Display SC', serif;
+}
+
+.table-time-cell {
+    width: 50%;
+    text-align: center;
+    padding: 1ch;
+}
+
+.table-descr-cell {
+    width: 50%;
+    text-align: left;
+    padding: 1ch;
 }

@@ -6,7 +6,7 @@
 }
 
 .story-text-title-div {
-    padding: 20px;
+    padding: 2%;
     display : block;
     overflow: hidden;
 }
@@ -15,14 +15,6 @@
     font-size: 7vmin;
     font-family: 'Playfair Display SC', serif;
     position: relative;
-}
-
-.story-text-content {
-    margin-left: 10%;
-    margin-right: 10%;
-    display: block;
-    font-size: 4vmin;
-    font-family: 'Dancing Script', cursive;
 }
 
 .story-line-root {
@@ -56,20 +48,34 @@
     position: relative;
 }
 
+.story-card-left-animate {
+    animation-name: left-card-ease-in;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
+.story-card-right-animate {
+    animation-name: right-card-ease-in;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+
 .story-line-empty-card {
-    height: 30vh;
+    width: 100%;
 }
 
 .story-line-link {
     height: auto;
-    width: 10vmin;
+    width: 5em;
 }
 
 h4 {
     display: flex;
     flex-direction: row;
     position: relative;
-    top: 40%
+    top: 40%;
 }
 
 h4:before,
@@ -78,4 +84,14 @@ h4:after {
     flex: 1 1;
     border-bottom: 3px solid #000;
     margin: auto;
+}
+
+@keyframes left-card-ease-in {
+    from { right: 50vw; }
+    to { right: 0px; }
+}
+
+@keyframes right-card-ease-in {
+    from { left: 50vw; }
+    to { left: 0px; }
 }

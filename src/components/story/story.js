@@ -5,8 +5,8 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import {
-    scrollHook_getDynamicMarginYPosition,
     scrollHook_getYPerBreakPerc,
+    scrollHook_getYPosition,
     scrollHook_getYPerBreakPercFromStart } from '../util/scrollHooks';
 
 const CardLink = (props) => {
@@ -20,39 +20,42 @@ const CardLink = (props) => {
 }
 
 const StoryCard = (props) => {
-    const scrollYBreak = 700;
-    const cardRowAdjustedBreak = 475;
-    const travelFactor = 2.5;
+    const isMobile = window.outerWidth <= 750 ? true : false;
 
-    const cardSlideInStyle = () => {
-        var yBreak = scrollHook_getYPerBreakPerc(scrollYBreak);
-        var yBreakAdj = props.row == 1 ? yBreak : scrollHook_getYPerBreakPercFromStart(cardRowAdjustedBreak, scrollYBreak);
-        var percent = ((yBreakAdj - 100) * -1) * travelFactor;
+    const cardDynamicAnimation = () => {
+        const scrollYBreak = isMobile ? 400 : 500
+        const cardRowAdjustedBreak = isMobile ? 400 : 900;
+        const rowYBreak = scrollYBreak + ((props.row - 1) * cardRowAdjustedBreak)
+        var playState = scrollHook_getYPosition() < rowYBreak ?  'paused' : 'running';
 
         if (props.placement == 'right') {
-            return {left: `${percent}px`, justifyContent: 'flex-start' }
+            return {
+                animationPlayState: playState,
+                justifyContent: 'flex-start'
+            }
         } else {
-            return {right: `${percent}px`, justifyContent: 'flex-end' }
+            return {
+                animationPlayState: playState,
+                justifyContent: 'flex-end'
+            }
         }
     }
 
     return (
-        <div className='story-card-content' style={cardSlideInStyle()}>
+        <div id='our-story' className={`story-card-content story-card-${props.placement}-animate`} style={cardDynamicAnimation()}>
             <CardLink isBefore={true} placement={props.placement}/>
-            <Card sx={{ maxWidth: 350 }}>
+            <Card sx={isMobile ? { maxWidth: '100vw' } : { maxWidth: '30vw' }}>
                 <CardMedia
                     component="img"
-                    height="140"
-                    image="images/grid/ring.jpg"
-                    alt="green iguana"
+                    height="auto"
+                    image={props.image}
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h7" component="div">
-                    01.14.21
+                        {props.date}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                    2010 - Lizards are a widespread group of squamate reptiles, with over 6,000
-                    species, ranging across all continents except Antarctica
+                        {props.desc}
                     </Typography>
                 </CardContent>
             </Card>
@@ -62,15 +65,28 @@ const StoryCard = (props) => {
 }
 
 const StoryCardRow = (props) => {
+    const isMobile = window.outerWidth <= 750 ? true : false;
+
     return (
         <div className='story-line-row'>
             <div className='story-line-left'>
-                <StoryCard placement='left' row={props.row}/>
-                <div className='story-line-empty-card'/>
+                <StoryCard
+                    placement='left'
+                    row={props.row}
+                    image={props.imageL}
+                    date={props.dateL}
+                    desc={props.descL}
+                />
             </div>
             <div className='story-line-right'>
-                <div className='story-line-empty-card'/>
-                <StoryCard placement='right' row={props.row}/>
+                <div className='story-line-empty-card' style={isMobile ? {height: '20vh'} : {height: '45vh'}}/>
+                <StoryCard
+                    placement='right'
+                    row={props.row}
+                    image={props.imageR}
+                    date={props.dateR}
+                    desc={props.descR}
+                />
             </div>
         </div>
     );
@@ -83,8 +99,34 @@ const Story = () => {
                 <p className='story-text-title'>Our Story</p>
             </div>
             <div className="story-line-root">
-                <StoryCardRow row='1'/>
-                <StoryCardRow row='2'/>
+                <StoryCardRow
+                    row='1'
+                    imageL='\images\grid\360-bridge.jpg' dateL='3.10.19'
+                    descL='This is at 360 bridge'
+                    imageR='\images\grid\atx-luvu.jpg' dateR='2.14.21'
+                    descR='This is our 8th anniv'
+                />
+                <StoryCardRow
+                    row='2'
+                    imageL='\images\grid\atx-luvu.jpg' dateL='7.3.18'
+                    descL='This is at atx'
+                    imageR='\images\grid\ring.jpg' dateR='2.14.21'
+                    descR='This is the ring'
+                />
+                <StoryCardRow
+                    row='3'
+                    imageL='\images\grid\360-bridge.jpg' dateL='3.10.19'
+                    descL='This is at 360 bridge'
+                    imageR='\images\grid\8-anniv.jpg' dateR='2.14.21'
+                    descR='This is our 8th anniv'
+                />
+                <StoryCardRow
+                    row='4'
+                    imageL='\images\grid\atx-luvu.jpg' dateL='7.3.18'
+                    descL='This is at atx'
+                    imageR='\images\grid\ring.jpg' dateR='2.14.21'
+                    descR='This is the ring'
+                />
             </div>
         </div>
     );
