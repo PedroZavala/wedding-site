@@ -33,13 +33,13 @@
     border-right: solid;
     overflow: hidden;
     width: 100%;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .story-line-right {
     overflow: hidden;
     width: 100%;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .story-card-content {
@@ -68,7 +68,7 @@
 
 .story-line-link {
     height: auto;
-    width: 8em;
+    width: 5em;
 }
 
 h4 {

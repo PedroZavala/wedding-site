@@ -24,7 +24,7 @@ const StoryCard = (props) => {
 
     const cardDynamicAnimation = () => {
         const scrollYBreak = isMobile ? 400 : 500
-        const cardRowAdjustedBreak = isMobile ? 400 : 1100;
+        const cardRowAdjustedBreak = isMobile ? 400 : 900;
         const rowYBreak = scrollYBreak + ((props.row - 1) * cardRowAdjustedBreak)
         var playState = scrollHook_getYPosition() < rowYBreak ?  'paused' : 'running';
 
