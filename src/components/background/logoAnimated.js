@@ -6,7 +6,7 @@ const LogoAnimated = () => {
 
     setTimeout(() => {
       setLogoFadeOut(-10);
-    }, 2500)
+    }, 3000)
 
     return (
         <div>

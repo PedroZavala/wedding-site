@@ -9,12 +9,12 @@
     display: grid;
     align-items: center;
     justify-content: center;
-    animation: logo-wrap-animation forwards 2s linear;
+    animation: logo-wrap-animation forwards 2.5s linear;
 }
 
 /* Grows logo and fades out */
 .logo-intro-img {
-    animation: logo-animation forwards 2s linear;
+    animation: logo-animation forwards 2.5s linear;
 }
 
 .background-img-content {
@@ -62,7 +62,7 @@
     }
     75% {
         transform: scale(1, 1);
-        opacity: 45%;
+        opacity: 25%;
     }
     100% {
         transform: scale(1.5, 1.5);
