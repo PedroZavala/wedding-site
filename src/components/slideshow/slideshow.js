@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 import SlideshowArrow from './slideshowArrow'
 
 const Slider = () => {
-    const slidesCount = 4;
+    const slidesCount = 5;
 
     const sliderWidth = window.outerWidth <= 1100 ? '100vw' : '100vw';
     const [slideIndex, setSlideIndex] = useState(1);

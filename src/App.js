@@ -9,12 +9,12 @@ import Menu from './components/menu/menu'
 import Footer from './components/footer/footer'
 
 const picGrid1 = [
-  'skyline-up.jpg',
   'rose-bushes-2.jpg',
+  'bridge-red.jpg',
+  'square-look-2.jpg',
   'tracks-close.jpg',
-  'vines.jpg',
-  'square-look.jpg',
-  'bridge-red.jpg'
+  'skyline-up.jpg',
+  'vines.jpg'
 ];
 
 const App = () => {
@@ -25,17 +25,16 @@ const App = () => {
         <Welcome/>
         <div className='content-section-1'>
           <Story/>
-          <Registries/>
-          <PicGrid pictures={picGrid1}/>
         </div>
         {/* See backgroundShift component for parallel scrolling
         effects when disabling background color in div box */}
         <div className='content-section-2'>
-          <Timeline/>
+          <Maps/>
         </div>
         <div className='content-section-3'>
-          {/* <PicGrid pictures={picGrid2}/> */}
-          <Maps/>
+          <Timeline/>
+          <Registries/>
+          <PicGrid pictures={picGrid1}/>
         </div>
         <Footer/>
       </div>

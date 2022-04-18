@@ -2,13 +2,10 @@ import './timeline.css'
 
 const eventItems = [
     {time: '5:00', descr: 'Ceremony'},
-    {time: '5:30', descr: 'Cocktail'},
-    {time: '5:45', descr: 'Grand Entrance'},
     {time: '6:15', descr: 'Dinner'},
     {time: '7:30', descr: 'Party!'},
-    {time: '8:30', descr: 'Events'},
     {time: '9:30', descr: 'Cake'},
-    {time: '11:00', descr: 'CLean Up'}
+    {time: '11:00', descr: 'Grand Exit'}
 ]
 
 const Timeline = () => {

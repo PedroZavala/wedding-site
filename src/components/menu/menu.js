@@ -20,7 +20,7 @@ const menuItems = [
   {text: 'Our Story', id:'/#our-story'},
   {text: 'Registry', id:'/#registry'},
   {text: 'Timeline', id:'/#timeline'},
-  {text: 'Directions', id:'/#directions'},
+  {text: 'Venue', id:'/#venue'},
   {text: 'RSVP', id:'/#welcome'}
 ];
 

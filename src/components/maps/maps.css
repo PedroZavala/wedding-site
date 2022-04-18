@@ -1,5 +1,6 @@
 .maps-root {
     text-align: center;
+    height: 500px;
 }
 
 .maps-title {
@@ -8,15 +9,21 @@
     font-family: 'Playfair Display SC', serif;
 }
 
+.maps-content {
+    display: flex;
+    height: 340px;
+    justify-content: center;
+    align-items: center;
+}
+
 .maps-icons-wrap {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .maps-icon {
-    width: calc(100px + 5vmin);
-    height: calc(100px + 5vmin);
+    width: 12ch;
+    height: 12ch;
     border-radius: 35%;
     margin-left: 7vmin;
     margin-right: 7vmin;

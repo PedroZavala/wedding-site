@@ -17,15 +17,17 @@
 }
 
 table {
-    width: 50vw;
-    font-size: 3ch;
-    font-family: 'Playfair Display SC', serif;
+    width: 80vw;
+    font-size: 1.75em;
+    font-family: 'Dancing Script', cursive;
+    color: black;
 }
 
 .table-time-cell {
     width: 50%;
-    text-align: center;
+    text-align: right;
     padding: 1ch;
+    padding-right: 3ch;
 }
 
 .table-descr-cell {

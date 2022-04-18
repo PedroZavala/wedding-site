@@ -11,12 +11,14 @@ const wazeMapsLogo = 'https://is5-ssl.mzstatic.com/image/thumb/Purple126/v4/3b/d
 
 const Maps = () => {
     return (
-        <div className='maps-root' id='directions'>
-            <p className='maps-title gold-underline'>Directions</p>
-            <div className='maps-icons-wrap'>
-                <div>
-                    <a href={googleMapsUrl}><img className='maps-icon grow' src={googleMapsLogo}></img></a>
-                    <a href={appleMapsUrl}><img className='maps-icon grow' src={appleMapsLogo}></img></a>
+        <div className='maps-root' id='venue'>
+            <p className='maps-title gold-underline'>Venue</p>
+            <div className='maps-content'>
+                <div className='maps-icons-wrap'>
+                    <div>
+                        <a href={googleMapsUrl}><img className='maps-icon grow' src={googleMapsLogo}></img></a>
+                        <a href={appleMapsUrl}><img className='maps-icon grow' src={appleMapsLogo}></img></a>
+                    </div>
                 </div>
             </div>
         </div>
