@@ -9,21 +9,12 @@ import Menu from './components/menu/menu'
 import Footer from './components/footer/footer'
 
 const picGrid1 = [
-  '360-bridge.jpg',
-  '8-anniv.jpg',
-  'atx-luvu.jpg',
-  'graf-park.jpg',
-  'atx-luvu.jpg',
-  'atx-luvu.jpg',
-];
-
-const picGrid2 = [
-  'jaki-15.jpg',
-  'market-square.jpg',
-  'mustache.jpg',
-  'p-bday.jpg',
-  'ring-eng.jpg',
-  'market-square.jpg'
+  'skyline-up.jpg',
+  'rose-bushes-2.jpg',
+  'tracks-close.jpg',
+  'vines.jpg',
+  'square-look.jpg',
+  'bridge-red.jpg'
 ];
 
 const App = () => {
@@ -43,7 +34,7 @@ const App = () => {
           <Timeline/>
         </div>
         <div className='content-section-3'>
-          <PicGrid pictures={picGrid2}/>
+          {/* <PicGrid pictures={picGrid2}/> */}
           <Maps/>
         </div>
         <Footer/>

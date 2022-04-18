@@ -101,31 +101,24 @@ const Story = () => {
             <div className="story-line-root">
                 <StoryCardRow
                     row='1'
-                    imageL='\images\grid\360-bridge.jpg' dateL='3.10.19'
-                    descL='This is at 360 bridge'
-                    imageR='\images\grid\atx-luvu.jpg' dateR='2.14.21'
-                    descR='This is our 8th anniv'
+                    imageL='\images\grid\first-pic.jpg' dateL='7.7.13'
+                    descL='Our very first picture together in senior year high school!'
+                    imageR='\images\grid\p-grad.jpg' dateR='5.3.17'
+                    descR="Pedro's college graduation"
                 />
                 <StoryCardRow
                     row='2'
-                    imageL='\images\grid\atx-luvu.jpg' dateL='7.3.18'
-                    descL='This is at atx'
-                    imageR='\images\grid\ring.jpg' dateR='2.14.21'
-                    descR='This is the ring'
+                    imageL='\images\grid\a-grad.jpg' dateL='5.12.18'
+                    descL="Ashley's college graduation"
+                    imageR='\images\grid\house-move.jpg' dateR='6.30.18'
+                    descR='Buying our first home!'
                 />
                 <StoryCardRow
                     row='3'
-                    imageL='\images\grid\360-bridge.jpg' dateL='3.10.19'
-                    descL='This is at 360 bridge'
-                    imageR='\images\grid\8-anniv.jpg' dateR='2.14.21'
-                    descR='This is our 8th anniv'
-                />
-                <StoryCardRow
-                    row='4'
-                    imageL='\images\grid\atx-luvu.jpg' dateL='7.3.18'
-                    descL='This is at atx'
-                    imageR='\images\grid\ring.jpg' dateR='2.14.21'
-                    descR='This is the ring'
+                    imageL='\images\grid\proposal.jpg' dateL='1.17.21'
+                    descL='We are engaged!'
+                    imageR='\images\grid\8-anniv.jpg' dateR='1.17.22'
+                    descR='Our 8th anniversary!'
                 />
             </div>
         </div>
