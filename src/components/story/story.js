@@ -101,23 +101,23 @@ const Story = () => {
             <div className="story-line-root">
                 <StoryCardRow
                     row='1'
-                    imageL='\images\grid\first-pic.jpg' dateL='7.7.13'
+                    imageL='\images\story\first-pic.jpg' dateL='7.7.13'
                     descL='Our very first picture together in senior year high school!'
-                    imageR='\images\grid\p-grad.jpg' dateR='5.3.17'
+                    imageR='\images\story\p-grad.jpg' dateR='5.3.17'
                     descR="Pedro's college graduation"
                 />
                 <StoryCardRow
                     row='2'
-                    imageL='\images\grid\a-grad.jpg' dateL='5.12.18'
+                    imageL='\images\story\a-grad.jpg' dateL='5.12.18'
                     descL="Ashley's college graduation"
-                    imageR='\images\grid\house-move.jpg' dateR='6.30.18'
+                    imageR='\images\story\house-move.jpg' dateR='6.30.18'
                     descR='Buying our first home!'
                 />
                 <StoryCardRow
                     row='3'
-                    imageL='\images\grid\proposal.jpg' dateL='1.17.21'
+                    imageL='\images\story\proposal.jpg' dateL='1.17.21'
                     descL='We are engaged!'
-                    imageR='\images\grid\8-anniv.jpg' dateR='1.17.22'
+                    imageR='\images\story\8-anniv.jpg' dateR='1.17.22'
                     descR='Our 8th anniversary!'
                 />
             </div>

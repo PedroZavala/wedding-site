@@ -8,7 +8,7 @@ import Timeline from './components/timeline/timeline';
 import Menu from './components/menu/menu'
 import Footer from './components/footer/footer'
 
-const picGrid1 = [
+const picGridImgs = [
   'rose-bushes-2.jpg',
   'bridge-red.jpg',
   'square-look-2.jpg',
@@ -34,7 +34,7 @@ const App = () => {
         <div className='content-section-3'>
           <Timeline/>
           <Registries/>
-          <PicGrid pictures={picGrid1}/>
+          <PicGrid pictures={picGridImgs}/>
         </div>
         <Footer/>
       </div>
