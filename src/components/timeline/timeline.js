@@ -17,12 +17,14 @@ const Timeline = () => {
             <img className='leaves' src='/images/leaves.png'></img>
             <div className='timeline-content'>
                 <table>
+                    <tbody>
                     {eventItems.map((event) => (
-                        <tr>
+                        <tr key={event.time}>
                             <td className='table-time-cell'>{event.time}</td>
                             <td className='table-descr-cell'>{event.descr}</td>
                         </tr>
                     ))}
+                    </tbody>
                 </table>
             </div>
             <img className='leaves' src='/images/leaves.png'></img>
