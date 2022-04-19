@@ -23,8 +23,8 @@
 }
 
 .registries-icon {
-    width: calc(100px + 5vmin);
-    height: calc(100px + 5vmin);
+    width: 12ch;
+    height: 12ch;
     border-radius: 35%;
     margin-left: 7vmin;
     margin-right: 7vmin;

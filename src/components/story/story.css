@@ -3,6 +3,7 @@
     margin-bottom: 50px;
     text-align: center;
     width: 100%;
+    padding-bottom: 40px;
 }
 
 .story-text-title-div {
@@ -29,8 +30,7 @@
 }
 
 .story-line-left {
-    border-color: black;
-    border-right: solid;
+    border-right: .3ch solid black;
     overflow: hidden;
     width: 100%;
     margin-left: 10px;
@@ -46,6 +46,7 @@
     display: flex;
     flex-wrap: nowrap;
     position: relative;
+    z-index: 2;
 }
 
 .story-card-left-animate {
@@ -82,7 +83,7 @@ h4:before,
 h4:after {
     content: "";
     flex: 1 1;
-    border-bottom: 3px solid #000;
+    border-bottom: .3ch solid black;
     margin: auto;
 }
 
