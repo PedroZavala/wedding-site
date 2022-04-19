@@ -141,7 +141,10 @@ const Rsvp = () => {
         <div>
             <RsvpButton variant="contained" onClick={handleRsvpClickOpen}>RSVP</RsvpButton>
             <Dialog open={open} onClose={handleFormClose}>
-                <DialogTitle>RSVP</DialogTitle>
+                <DialogTitle sx={{
+                            fontFamily: '\'Dancing Script\', cursive',
+                            fontSize: '2em'
+                            }}>RSVP</DialogTitle>
                 <DialogContent>
                     <DialogContentText className='rsvp-info'>
                         We are excited that you will be a part of our wedding!

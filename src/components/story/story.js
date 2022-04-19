@@ -4,10 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import {
-    scrollHook_getYPerBreakPerc,
-    scrollHook_getYPosition,
-    scrollHook_getYPerBreakPercFromStart } from '../util/scrollHooks';
+import { scrollHook_getYPosition } from '../util/scrollHooks';
 
 const CardLink = (props) => {
     if (props.placement == 'right' && props.isBefore) {
@@ -51,7 +48,11 @@ const StoryCard = (props) => {
                     image={props.image}
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h7" component="div">
+                    <Typography gutterBottom variant="h7" component="div"
+                        sx={{
+                            fontFamily: '\'Dancing Script\', cursive',
+                            fontSize: '4vmin'
+                            }}>
                         {props.date}
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
@@ -101,24 +102,24 @@ const Story = () => {
             <div className="story-line-root">
                 <StoryCardRow
                     row='1'
-                    imageL='\images\story\first-pic.jpg' dateL='7.7.13'
+                    imageL='\images\story\first-pic.jpg' dateL='Sept • 7 • 2013'
                     descL='Our very first picture together in senior year high school!'
-                    imageR='\images\story\p-grad.jpg' dateR='5.3.17'
-                    descR="Pedro's college graduation"
+                    imageR='\images\story\p-grad.jpg' dateR='May • 3 • 2017'
+                    descR="Celebrating Pedro's college graduation after 4 years together! #gocoogs"
                 />
                 <StoryCardRow
                     row='2'
-                    imageL='\images\story\a-grad.jpg' dateL='5.12.18'
-                    descL="Ashley's college graduation"
-                    imageR='\images\story\house-move.jpg' dateR='6.30.18'
-                    descR='Buying our first home!'
+                    imageL='\images\story\a-grad.jpg' dateL='May  • 12 • 2018'
+                    descL="Celebrating Ashley's college graduation after 5 years together! #gocoogs"
+                    imageR='\images\story\house-move.jpg' dateR='June  • 30 • 2018'
+                    descR='Super excited buying our first home and moving to Austin!'
                 />
                 <StoryCardRow
                     row='3'
-                    imageL='\images\story\proposal.jpg' dateL='1.17.21'
-                    descL='We are engaged!'
-                    imageR='\images\story\8-anniv.jpg' dateR='1.17.22'
-                    descR='Our 8th anniversary!'
+                    imageL='\images\story\proposal.jpg' dateL='Jan  • 17 • 2021'
+                    descL='OMG! I said Yess! #7thanniversary'
+                    imageR='\images\story\8-anniv.jpg' dateR='Jan • 17 • 2022'
+                    descR='Celebrating our 8th anniversary! #oneyearengaged'
                 />
             </div>
         </div>

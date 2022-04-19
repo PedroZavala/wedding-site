@@ -17,11 +17,11 @@ import ListItem from '@mui/material/ListItem';
 const drawerWidth = 200;
 
 const menuItems = [
+  {text: 'RSVP', id:'/#welcome'},
   {text: 'Our Story', id:'/#our-story'},
-  {text: 'Registry', id:'/#registry'},
-  {text: 'Timeline', id:'/#timeline'},
   {text: 'Venue', id:'/#venue'},
-  {text: 'RSVP', id:'/#welcome'}
+  {text: 'Timeline', id:'/#timeline'},
+  {text: 'Registry', id:'/#registry'}
 ];
 
 const AppBar = styled(MuiAppBar, {

@@ -13,7 +13,7 @@
 }
 
 .story-text-title {
-    font-size: 7vmin;
+    font-size: 6vmin;
     font-family: 'Playfair Display SC', serif;
     position: relative;
 }
@@ -46,7 +46,6 @@
     display: flex;
     flex-wrap: nowrap;
     position: relative;
-    z-index: 2;
 }
 
 .story-card-left-animate {
@@ -70,6 +69,10 @@
 .story-line-link {
     height: auto;
     width: 5em;
+}
+
+.card-header-content {
+    display: flex;
 }
 
 h4 {

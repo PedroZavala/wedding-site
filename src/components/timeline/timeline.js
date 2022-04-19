@@ -9,9 +9,12 @@ const eventItems = [
 ]
 
 const Timeline = () => {
+    const isMobile = window.outerWidth <= 750 ? true : false;
+
     return (
         <div className='timeline-root' id='timeline'>
             <p className='timeline-title gold-underline'>Day Of Timeline</p>
+            <img className='leaves' src='/images/leaves.png'></img>
             <div className='timeline-content'>
                 <table>
                     {eventItems.map((event) => (
@@ -22,6 +25,7 @@ const Timeline = () => {
                     ))}
                 </table>
             </div>
+            <img className='leaves' src='/images/leaves.png'></img>
         </div>
     );
 }

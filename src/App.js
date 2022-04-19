@@ -33,8 +33,8 @@ const App = () => {
         </div>
         <div className='content-section-3'>
           <Timeline/>
-          <Registries/>
           <PicGrid pictures={picGridImgs}/>
+          <Registries/>
         </div>
         <Footer/>
       </div>

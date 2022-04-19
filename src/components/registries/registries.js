@@ -9,9 +9,7 @@ const amazonLogo = 'https://is4-ssl.mzstatic.com/image/thumb/Purple116/v4/0d/cf/
 const Registries = () => {
     return (
         <div className='registries-root' id='registry'>
-            <div className='registries-title-div gold-underline'>
-                <p className='registries-title'>Gift Registry</p>
-            </div>
+            <p className='registries-title gold-underline'>Gift Registry</p>
             <div className='registries-center'>
                 <div>
                     <a href={amazonUrl}><img className='registries-icon grow' src={amazonLogo}></img></a>
