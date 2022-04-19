@@ -21,6 +21,7 @@ const menuItems = [
   {text: 'Our Story', id:'/#our-story'},
   {text: 'Venue', id:'/#venue'},
   {text: 'Timeline', id:'/#timeline'},
+  {text: 'Gallery', id:'/#gallery'},
   {text: 'Registry', id:'/#registry'}
 ];
 

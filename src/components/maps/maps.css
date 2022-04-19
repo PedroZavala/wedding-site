@@ -7,6 +7,8 @@
     padding: 20px;
     font-size: 6vmin;
     font-family: 'Playfair Display SC', serif;
+    color: white;
+    text-shadow: 1px 1px 2px black;
 }
 
 .maps-content {
