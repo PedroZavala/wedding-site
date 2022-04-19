@@ -1,12 +1,6 @@
 .registries-root {
     text-align: center;
-    margin-bottom: 30px;
-}
-
-.registries-title-div {
-    padding: 3vmin;
-    display : block;
-    overflow: hidden;
+    padding-bottom: 30px;
 }
 
 .registries-title {
@@ -23,8 +17,8 @@
 }
 
 .registries-icon {
-    width: calc(100px + 5vmin);
-    height: calc(100px + 5vmin);
+    width: 12ch;
+    height: 12ch;
     border-radius: 35%;
     margin-left: 7vmin;
     margin-right: 7vmin;

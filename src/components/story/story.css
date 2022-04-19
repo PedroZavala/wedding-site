@@ -3,6 +3,7 @@
     margin-bottom: 50px;
     text-align: center;
     width: 100%;
+    padding-bottom: 40px;
 }
 
 .story-text-title-div {
@@ -12,7 +13,7 @@
 }
 
 .story-text-title {
-    font-size: 7vmin;
+    font-size: 6vmin;
     font-family: 'Playfair Display SC', serif;
     position: relative;
 }
@@ -29,8 +30,7 @@
 }
 
 .story-line-left {
-    border-color: black;
-    border-right: solid;
+    border-right: .3ch solid black;
     overflow: hidden;
     width: 100%;
     margin-left: 10px;
@@ -50,14 +50,14 @@
 
 .story-card-left-animate {
     animation-name: left-card-ease-in;
-    animation-duration: .5s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
 }
 
 .story-card-right-animate {
     animation-name: right-card-ease-in;
-    animation-duration: .5s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
 }
@@ -71,6 +71,10 @@
     width: 5em;
 }
 
+.card-header-content {
+    display: flex;
+}
+
 h4 {
     display: flex;
     flex-direction: row;
@@ -82,7 +86,7 @@ h4:before,
 h4:after {
     content: "";
     flex: 1 1;
-    border-bottom: 3px solid #000;
+    border-bottom: .3ch solid black;
     margin: auto;
 }
 

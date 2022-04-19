@@ -9,7 +9,7 @@ const PicGrid = (props) => {
     const numColumns = window.outerWidth <= 500 ? 2 : 3;
 
     return (
-        <div className='picgrid-root'>
+        <div className='picgrid-root' id='gallery'>
             <Box className='picgrid-content' sx={{ overflowY: 'visible' }}>
                 <ImageList variant="quilted" cols={numColumns} gap={6}>
                     {props.pictures.map((imageName) => (

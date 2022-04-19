@@ -1,22 +1,31 @@
 .maps-root {
     text-align: center;
+    height: 500px;
 }
 
 .maps-title {
     padding: 20px;
-    font-size: 7vmin;
+    font-size: 6vmin;
     font-family: 'Playfair Display SC', serif;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.maps-content {
+    display: flex;
+    height: 340px;
+    justify-content: center;
+    align-items: center;
 }
 
 .maps-icons-wrap {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .maps-icon {
-    width: calc(100px + 5vmin);
-    height: calc(100px + 5vmin);
+    width: 12ch;
+    height: 12ch;
     border-radius: 35%;
     margin-left: 7vmin;
     margin-right: 7vmin;

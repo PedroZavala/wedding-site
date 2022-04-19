@@ -13,15 +13,17 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItem from '@mui/material/ListItem';
+import OutsideClickHandler from 'react-outside-click-handler';
 
 const drawerWidth = 200;
 
 const menuItems = [
+  {text: 'RSVP', id:'/#welcome'},
   {text: 'Our Story', id:'/#our-story'},
-  {text: 'Registry', id:'/#registry'},
+  {text: 'Venue', id:'/#venue'},
   {text: 'Timeline', id:'/#timeline'},
-  {text: 'Directions', id:'/#directions'},
-  {text: 'RSVP', id:'/#welcome'}
+  {text: 'Gallery', id:'/#gallery'},
+  {text: 'Registry', id:'/#registry'}
 ];
 
 const AppBar = styled(MuiAppBar, {
@@ -64,53 +66,55 @@ const Menu = () => {
 
   return (
     <Box sx={{ display: 'flex', position: 'fixed', zIndex: '2'}}>
-      <CssBaseline />
-      <AppBar position="fixed" open={open} style={{
-        backgroundColor: 'transparent',
-        boxShadow: 'none'}}
-      >
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            sx={{
-              backgroundColor: 'black',
-              opacity: '.4',
-              mr: 2, ...(open && { display: 'none' }) }}
-          >
-          <MenuIcon />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
-      <Drawer
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          '& .MuiDrawer-paper': {
+      <OutsideClickHandler onOutsideClick={() => { handleDrawerClose() }}>
+        <CssBaseline />
+        <AppBar position="fixed" open={open} style={{
+          backgroundColor: 'transparent',
+          boxShadow: 'none'}}
+        >
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              onClick={handleDrawerOpen}
+              edge="start"
+              sx={{
+                backgroundColor: 'black',
+                opacity: '.4',
+                mr: 2, ...(open && { display: 'none' }) }}
+            >
+            <MenuIcon />
+            </IconButton>
+          </Toolbar>
+        </AppBar>
+        <Drawer
+          sx={{
             width: drawerWidth,
-            boxSizing: 'border-box',
-          },
-        }}
-        variant="persistent"
-        anchor="left"
-        open={open}
-      >
-        <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
-          </IconButton>
-        </DrawerHeader>
-        <Divider />
-        <List>
-          {menuItems.map((item) => (
-            <ListItem button key={item.id}>
-              <a href={item.id} className="menu-item-text" onClick={handleDrawerClose}>{item.text}</a>
-            </ListItem>
-          ))}
-        </List>
-      </Drawer>
+            flexShrink: 0,
+            '& .MuiDrawer-paper': {
+              width: drawerWidth,
+              boxSizing: 'border-box',
+            },
+          }}
+          variant="persistent"
+          anchor="left"
+          open={open}
+        >
+          <DrawerHeader>
+            <IconButton onClick={handleDrawerClose}>
+              {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+            </IconButton>
+          </DrawerHeader>
+          <Divider />
+          <List>
+            {menuItems.map((item) => (
+              <ListItem button key={item.id}>
+                <a href={item.id} className="menu-item-text" onClick={handleDrawerClose}>{item.text}</a>
+              </ListItem>
+            ))}
+          </List>
+        </Drawer>
+      </OutsideClickHandler>
     </Box>
   );
 }

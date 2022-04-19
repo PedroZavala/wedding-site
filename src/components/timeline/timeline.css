@@ -8,8 +8,9 @@
 .timeline-title {
     color: black;
     padding: 20px;
-    font-size: 7vmin;
+    font-size: 6vmin;
     font-family: 'Playfair Display SC', serif;
+    padding-bottom: 0;
 }
 
 .timeline-content {
@@ -17,19 +18,32 @@
 }
 
 table {
-    width: 50vw;
-    font-size: 3ch;
-    font-family: 'Playfair Display SC', serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    font-size: 1.75em;
+    font-family: 'Dancing Script', cursive;
+    color: black;
 }
 
 .table-time-cell {
     width: 50%;
-    text-align: center;
+    text-align: right;
     padding: 1ch;
+    padding-right: 2ch;
 }
 
 .table-descr-cell {
     width: 50%;
     text-align: left;
     padding: 1ch;
+    padding-left: 2ch;
+}
+
+.leaves {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 90%;
 }
