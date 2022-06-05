@@ -20,10 +20,10 @@ const drawerWidth = 200;
 const menuItems = [
   {text: 'RSVP', id:'/#welcome'},
   {text: 'Our Story', id:'/#our-story'},
+  {text: 'Registry', id:'/#registry'},
   {text: 'Venue', id:'/#venue'},
   {text: 'Timeline', id:'/#timeline'},
-  {text: 'Gallery', id:'/#gallery'},
-  {text: 'Registry', id:'/#registry'}
+  {text: 'Gallery', id:'/#gallery'}
 ];
 
 const AppBar = styled(MuiAppBar, {

@@ -24,7 +24,7 @@ const BackgroundShift = () => {
       </div>
       <div className='background-img-content'
         style={scrollHook_getYPosition() < scrollYBreak ? contentDisable : contentEnable}>
-        <img className='background-img' src='/images/venue-2.jpg'></img>
+        <img className='background-img' src='/images/venue.jpg' loading='lazy'></img>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import './registries.css'
 
-const targetUrl = 'https://target.com';
+const targetUrl = 'https://www.target.com/gift-registry/gift/zavalawedding2022';
 const targetLogo = 'https://is3-ssl.mzstatic.com/image/thumb/Purple116/v4/05/ef/6e/05ef6edc-bebf-73ab-04e7-a2993e365509/AppIconShiny-0-1x_U007emarketing-0-7-0-85-220.png/246x0w.webp';
 
 const amazonUrl = 'https://www.amazon.com/wedding/pedro-zavala-ashley-rodriguez--september-2022/registry/2B6J0WWRXKGOK';
@@ -12,8 +12,8 @@ const Registries = () => {
             <p className='registries-title gold-underline'>Gift Registry</p>
             <div className='registries-center'>
                 <div>
-                    <a href={amazonUrl}><img className='registries-icon grow' src={amazonLogo}></img></a>
-                    <a href={targetUrl}><img className='registries-icon grow' src={targetLogo}></img></a>
+                    <a href={amazonUrl}><img className='registries-icon grow' src={amazonLogo} loading='lazy'></img></a>
+                    <a href={targetUrl}><img className='registries-icon grow' src={targetLogo} loading='lazy'></img></a>
                 </div>
             </div>
         </div>
