@@ -12,8 +12,8 @@ const Registries = () => {
             <p className='registries-title gold-underline'>Gift Registry</p>
             <div className='registries-center'>
                 <div>
-                    <a href={amazonUrl}><img className='registries-icon grow' src={amazonLogo}></img></a>
-                    <a href={targetUrl}><img className='registries-icon grow' src={targetLogo}></img></a>
+                    <a href={amazonUrl}><img className='registries-icon grow' src={amazonLogo} loading='lazy'></img></a>
+                    <a href={targetUrl}><img className='registries-icon grow' src={targetLogo} loading='lazy'></img></a>
                 </div>
             </div>
         </div>

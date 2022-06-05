@@ -16,8 +16,8 @@ const Maps = () => {
             <div className='maps-content'>
                 <div className='maps-icons-wrap'>
                     <div>
-                        <a href={googleMapsUrl}><img className='maps-icon grow' src={googleMapsLogo}></img></a>
-                        <a href={appleMapsUrl}><img className='maps-icon grow' src={appleMapsLogo}></img></a>
+                        <a href={googleMapsUrl}><img className='maps-icon grow' src={googleMapsLogo} loading='lazy'></img></a>
+                        <a href={appleMapsUrl}><img className='maps-icon grow' src={appleMapsLogo} loading='lazy'></img></a>
                     </div>
                 </div>
             </div>

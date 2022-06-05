@@ -14,7 +14,7 @@ const Timeline = () => {
     return (
         <div className='timeline-root' id='timeline'>
             <p className='timeline-title gold-underline'>Day Of Timeline</p>
-            <img className='leaves' src='/images/leaves.png'></img>
+            <img className='leaves' src='/images/leaves.png' loading='lazy'></img>
             <div className='timeline-content'>
                 <table>
                     <tbody>
@@ -27,7 +27,7 @@ const Timeline = () => {
                     </tbody>
                 </table>
             </div>
-            <img className='leaves' src='/images/leaves.png'></img>
+            <img className='leaves' src='/images/leaves.png' loading='lazy'></img>
         </div>
     );
 }

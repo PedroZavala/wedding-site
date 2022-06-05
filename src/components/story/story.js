@@ -46,6 +46,7 @@ const StoryCard = (props) => {
                     component="img"
                     height="auto"
                     image={props.image}
+                    loading="lazy"
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h7" component="div"
