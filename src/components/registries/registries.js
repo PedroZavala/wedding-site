@@ -1,6 +1,6 @@
 import './registries.css'
 
-const targetUrl = 'https://target.com';
+const targetUrl = 'https://www.target.com/gift-registry/gift/zavalawedding2022';
 const targetLogo = 'https://is3-ssl.mzstatic.com/image/thumb/Purple116/v4/05/ef/6e/05ef6edc-bebf-73ab-04e7-a2993e365509/AppIconShiny-0-1x_U007emarketing-0-7-0-85-220.png/246x0w.webp';
 
 const amazonUrl = 'https://www.amazon.com/wedding/pedro-zavala-ashley-rodriguez--september-2022/registry/2B6J0WWRXKGOK';
