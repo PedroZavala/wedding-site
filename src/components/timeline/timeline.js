@@ -16,7 +16,7 @@ const Timeline = () => {
             <p className='timeline-title gold-underline'>Day Of Timeline</p>
             <img className='leaves' src='/images/leaves.png' loading='lazy'></img>
             <div className='timeline-content'>
-                <table>
+                {/* <table>
                     <tbody>
                     {eventItems.map((event) => (
                         <tr key={event.time}>
@@ -25,7 +25,8 @@ const Timeline = () => {
                         </tr>
                     ))}
                     </tbody>
-                </table>
+                </table> */}
+                <p style={{fontSize: '1.5em'}}>Coming soon...</p>
             </div>
             <img className='leaves' src='/images/leaves.png' loading='lazy'></img>
         </div>
